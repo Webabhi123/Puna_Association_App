@@ -19,13 +19,14 @@
             ],
             "tsConfig": "tsconfig.app.json",
             "assets": [
-              {
-                "glob": "**/*",
-                "input": "public"
-              }
+            "src/assets"    
             ],
             "styles": [
-              "src/styles.css"
+              "src/styles.css",
+              "src/assets/css/style.css"
+            ],
+            "scripts": [
+              "src/assets/js/script.js"
             ],
             "server": "src/main.server.ts",
             "outputMode": "server",
@@ -81,10 +82,7 @@
             ],
             "tsConfig": "tsconfig.spec.json",
             "assets": [
-              {
-                "glob": "**/*",
-                "input": "public"
-              }
+              "src/assets"
             ],
             "styles": [
               "src/styles.css"
@@ -93,5 +91,8 @@
         }
       }
     }
+  },
+  "cli": {
+    "analytics": "c4663b2f-3282-43d7-8fe3-d4af36108394"
   }
 }

@@ -1,0 +1,479 @@
+<body>
+      <!-- Top Bar -->
+    <div class="top-bar">
+        <div class="left">
+            <i class="fa-solid fa-phone"></i> 7972579597 &nbsp;|&nbsp; <i class="fa-solid fa-envelope"></i> peeapune1&#64;gmail.com
+        </div>
+        <div class="right">
+            <a href="MemberLogin.html">Member's Login</a>
+            <a href="#">Member Search</a>
+            <a href="#">Just Click</a>
+        </div>
+    </div>
+
+    <!-- Main Header -->
+    <div class="main-header">
+        <div class="logo">
+            <!-- <img src="brands-logo/PEEA_LOGO_1-removebg-preview.png" alt="Logo" /> -->
+            <!-- <img src="assets/brands-logo/PEEA_LOGO_1-removebg-preview" alt="Logo"> -->
+             <img src="assets/brands-logo/PEEA_LOGO_1-removebg-preview.png" alt="">
+            <div class="logo-text">
+                <h1>Poona<span> Electric &</span> Electronics Association</h1>
+                <small>POONA ELECTRIC & ELECTRONICS ASSOCIATION (PEEA) </small>
+            </div>
+        </div>
+        <div class="search-bar">
+            <select>
+                <option>Product/Category</option>
+                <option>Wires</option>
+                <option>LEDs</option>
+            </select>
+            <input type="text" placeholder="Search by Brands or Products..." />
+            <button><i class="fa-solid fa-magnifying-glass"></i></button>
+        </div>
+    </div>
+
+    <!-- Navigation Bar -->
+<nav class="navbar">
+        <button class="navbar-toggle" onclick="toggleNavbar()">☰</button>
+        <ul id="navbarMenu">
+            <li><a href="index.html"><i class="fa-solid fa-house"></i></a></li>
+                <li><a href="about.html">About Us</a>
+                <div class="dropdown">
+                    <!-- <a href="#">President's Desk</a> -->
+                    <a routerLink="/about" routerLinkActive="active">About Us</a>
+                    <a routerLink="/keyinitiative">Key Initiatives</a>
+                    <a href="about.html#aims-objectives">History Of PEEA</a>
+                    <a href="PresidentDesk.html">President's desk</a>
+                    <!-- <a href="#">Past President</a> -->
+                    <a href="about.html#facilities-member-services">Facility To Members</a>
+                </div>
+            </li>
+            <li><a href="#">COMMITTEE</a>
+                <div class="dropdown">
+                    <a href="managecommittee.html" target="_blank">Managing</a>
+                    <a href="websitecommittee.html" target="_blank">Website</a>
+                    <a href="activitycommittee.html" target="_blank">Activity</a>
+                    <a href="activitycommittee.html" target="_blank">Past President</a>
+                </div>
+            </li>
+            <li><a href="#">MEMBERSHIP</a>
+                <!-- <div class="dropdown">
+                    <a href="#">Member Login</a>
+                    <a href="#">Member Search</a>
+                    <a href="#">Become a Member</a>
+                </div> -->
+            </li>
+            <li><a href="#">CATEGORIES</a></li>
+                <!-- <div class="dropdown">
+                    <a href="ProductPromotion.html" target="_blank">Product Promotion</a>
+                    <a href="TechnicalSupport.html" target="_blank">Technical Support</a>
+                    <a href="Consultancy.html" target="_blank">Consultancy</a>
+                    <a href="TradeEvent.html" target="_blank">Trade Events</a>
+                    <a href="Networking.html" target="_blank">NETWORKING</a>
+                </div> -->
+
+            <li><a href="#">NEWS & EVENTS</a>
+                <div class="dropdown">
+                    <a href="Exhibitions.html" target="_blank">Exhibitions</a>
+                    <a href="Conferences.html" target="_blank">Conferences</a>
+                    <a href="Webinar.html" target="_blank">Webinars</a>
+                    <a href="EventCalendar.html" target="_blank">Event Calendar</a>
+                    <a href="Awards.html" target="_blank">Awards</a>
+                    <a href="knowledge.html" target="_blank">Knowledge</a>
+            </div>
+            </li>
+            <li><a href="#">Media</a>
+                <div class="dropdown">
+                    <a href="Exhibitions.html" target="_blank">Photos</a>
+                    <a href="Conferences.html" target="_blank">Videos</a>
+                    <a href="Webinar.html" target="_blank">Inspiring Stories</a>
+                    <a href="EventCalendar.html" target="_blank">Blogs</a>
+            </div>
+            </li>
+            <li><a href="Transport.html" target="_blank">TRANSPORT</a></li>
+            <li><a href="Download.html">DOWNLOAD</a></li>
+<li><a [routerLink]="'/contactus'" routerLinkActive="active">Contact Us</a></li>
+
+            
+        </ul>
+    </nav>
+
+    <div class="main-container">
+        <!-- SECTION 1: SLIDER -->
+        <div class="slider-container">
+            <div class="slides" id="slides">
+                <div class="slide slide1">
+                    <img src="assets/images/main-image.jpg" class="img-fluid" />
+                     <!-- <img src="/assets/images/main-image.jpg" alt=""> -->
+                    
+                </div>
+                <div class="slide slide2">
+                    <!-- <img src="/assets/images/main-image2.jpg" class="img-fluid" /> -->
+                    
+                    <img src="/assets/images/main-image2.jpg" class="img-fluid" />
+                </div>
+                <div class="slide slide3">
+                    <img src="/assets/images/main-image3.jpg" class="img-fluid" />
+                </div>
+                <div class="slide slide4">
+                    <img src="/assets/images/main-image4.jpg" class="img-fluid" />
+                </div>
+            </div>
+
+            <div class="buttons">
+                <button class="btn" id="prev">
+                     </button>
+                        <button class="btn" id="next"> > </button>
+            </div>
+
+            <div class="dots" id="dots">
+                <span class="dot active"></span>
+                <span class="dot"></span>
+                <span class="dot"></span>
+                <span class="dot"></span>
+            </div>
+        </div>
+
+        <!-- SECTION 2 -->
+        <div class="section-two">
+
+             <!-- Sponsors/Ads - horizontal scroll -->
+            <div class="sponsors">
+                <h3>SPONSORED BY</h3>
+                <div class="sp-track">
+                    <div class="sponsor-track">
+                        <!-- <div class="sponsor">
+                            <img src="brands-logo/thumbs_bose-logo1.gif">
+                        </div>
+                        <div class="sponsor">
+                            <img src="brands-logo/thumbs_toshiba-logo.gif">
+                        </div>
+                        <div class="sponsor">
+                            <img src="brands-logo/thumbs_zenith-logo.gif">
+                        </div>
+                        <div class="sponsor">
+                            <img src="brands-logo/thumbs_sony-logo.gif">
+                        </div>
+                        <div class="sponsor">
+                            <img src="brands-logo/thumbs_sanyo-logo.gif">
+                        </div>
+                        <div class="sponsor">
+                            <img src="brands-logo/thumbs_hitachi-logo1.gif">
+                        </div>
+                        <div class="sponsor">
+                            <img src="brands-logo/thumbs_lg-logo1.gif">
+                        </div>
+                        <div class="sponsor">
+                            <img src="brands-logo/thumbs_panasonic-logo.gif">
+                        </div> -->
+                    </div>
+                </div>
+            </div>
+
+             <!-- Upcoming Events - vertical scroll  -->
+            <h3>UPCOMING EVENT'S</h3>
+
+            <!-- <div class="events">
+                <div class="event-track">
+                    <div class="event">
+                        <img src="brands-logo/pngg-removebg-preview.png">
+                        <div class="event-text">
+                            <h4>Annual Meetup</h4>
+                            <p>Published: June 5, 2025</p>
+                        </div>
+                    </div>
+                    <div class="event">
+                        <img src="brands-logo/pngg-removebg-preview.png">
+                        <div class="event-text">
+                            <h4>Tech Innovation Fair</h4>
+                            <p>Published: June 3, 2025</p>
+                        </div>
+                    </div>
+                    <div class="event">
+                        <img src="brands-logo/pngg-removebg-preview.png">
+                        <div class="event-text">
+                            <h4>Member Award Ceremony</h4>
+                            <p>Published: May 30, 2025</p>
+                        </div>
+                    </div>
+                    <div class="event">
+                        <img src="brands-logo/pngg-removebg-preview.png">
+                        <div class="event-text">
+                            <h4>Green Energy Drive</h4>
+                            <p>Published: May 25, 2025</p>
+                        </div>
+                    </div>
+                    Repeat again for infinite feel
+                    <div class="event">
+                        <img src="brands-logo/pngg-removebg-preview.png">
+                        <div class="event-text">
+                            <h4>Annual Meetup</h4>
+                            <p>Published: June 5, 2025</p>
+                        </div>
+                    </div>
+                    <div class="event">
+                        <img src="brands-logo/pngg-removebg-preview.png">
+                        <div class="event-text">
+                            <h4>Tech Innovation Fair</h4>
+                            <p>Published: June 4, 2025</p>
+                        </div>
+                    </div>
+
+                    <div class="event">
+                        <img src="brands-logo/pngg-removebg-preview.png">
+                        <div class="event-text">
+                            <h4>Tech Innovation Fair</h4>
+                            <p>Published: June 3, 2025</p>
+                        </div>
+                    </div>
+
+
+                    <div class="event">
+                        <img src="brands-logo/pngg-removebg-preview.png">
+                        <div class="event-text">
+                            <h4>Tech Innovation Fair</h4>
+                            <p>Published: June 2, 2025</p>
+                        </div>
+                    </div>
+                </div>
+            </div> -->
+
+        </div>
+
+    </div>
+
+    <section class="founder-section">
+        <div class="founder-image">
+            <img src="assets/images/main-image.jpg" alt="Founder Image" />
+        </div>
+
+        <div class="founder-text">
+            <h2>Founders <span>Message</span></h2>
+            <p>
+                To be the leading voice and catalyst for innovation, safety, and excellence in the electrical industry —
+                empowering professionals, advancing standards, and driving sustainable energy solutions for a brighter,
+                connected future.
+                <br><br>    
+                Mission To support and represent electrical professionals by promoting industry excellence, advancing safety
+                standards,
+                providing high-quality education and training, fostering innovation, and advocating for policies that strengthen
+                the electrical trade and its workforce.
+                To provide business development platforms for enabling collaborations and B2B engagement for business expansion
+                and new opportunities.
+            </p>
+            <div class="founder-name">
+                <h3>Poona Electric & Electronics Association</h3>
+                <span>Chairman & Managing Director</span>
+            </div>
+        </div>
+    </section>
+    <!-- Creative Ads Section -->
+<section class="creative-ads">
+  <h3 style="text-align: center;">Sponsored By</h3>
+  <div class="creative-ads-row">
+    <div class="creative-ad-card">
+      <img src="assets/brands-logo/images/ad1.jpg" alt="Ad 1">
+      <div class="ad-content">
+        <h4>Everest Electricals</h4>
+        <p>Quality cables and accessories for all your needs.</p>
+        <a href="#" class="ad-btn">Visit Site</a>
+      </div>
+    </div>
+    <div class="creative-ad-card">
+      <img src="assets/brands-logo/images/ad2.jpg" alt="Ad 2">
+      <div class="ad-content">
+        <h4>Unique Switchgears</h4>
+        <p>Reliable switchgear solutions for modern businesses.</p>
+        <a href="#" class="ad-btn">Learn More</a>
+      </div>
+    </div>
+    <div class="creative-ad-card">
+      <img src="assets/brands-logo/images/ad3.jpg" alt="Ad 3">
+      <div class="ad-content">
+        <h4>Fastway Couriers</h4>
+        <p>Fast and secure courier services across India.</p>
+        <a href="#" class="ad-btn">Track Now</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+    <section class="about-container">
+        <h2>About <span>Poona</span> Electric & Electronics Association</h2>
+        <div class="about-box">
+            <!-- Left Section -->
+            <div class="about-left">
+                <p>
+                    PEEA is the Pune level body of Traders in electrical, industrial electronics, Licensed electrical contractors and
+                    associates like electrical manufacturers, engineers, consultants and similar service providers in India and was
+                    founded in . PEEA has become a pioneer association of the Electrical sector having more than 900 active members.
+                </p>
+                <p>
+                    PEEA members represent a combined annual turnover in excess of USD 70 billion. India’s exports of electrical
+                    equipment are around USD 12 billion.
+                </p>
+                <p>
+                <strong>Core Beliefs of an Electrical Trade Association:</strong>
+                </p>
+                <button onclick="window.location.href='about.html'">Read More</button>
+            </div>
+        </div>
+    </section>
+
+    <div class="stats-section">
+        <!-- Box 1 -->
+        <div class="box">
+            <h2>Website Established</h2>
+            <div class="number" id="yearCounter">0</div>
+        </div>
+
+        <!-- Box 2 -->
+        <div class="box">
+            <h2>Members Associated</h2>
+            <div class="number" id="memberCounter">0</div>
+        </div>
+
+        <!-- Box 3 -->
+        <div class="box">
+            <h2>Upcoming Events</h2>
+            <ul class="events-list">
+                <li>Annual Meet 2025</li>
+                <li>Policy Review Session</li>
+                <li>Tech Exhibition 2025</li>
+            </ul>
+            <a href="#" class="read-more">Read More</a>
+        </div>
+    </div>
+
+    <!-- Join Section -->
+    <section class="join-section">
+        <div class="join-boxes">
+            <!-- Box 1: Join Association -->
+            <div class="join-box">
+                <h2>Become an Associate</h2>
+                <p>Join the Poona Electric & Electronics Association (PEEA) to connect, collaborate, and grow with industry leaders and
+                    innovators.</p>
+                <a href="#" class="know-more-btn">Know More</a>
+            </div>
+
+            <!-- Box 2: Support Association -->
+            <div class="join-box">
+                <h2>Support the Association</h2>
+                <p>Show your support by contributing your skills, resources, or sponsorship to help us thrive and lead.
+                </p>
+                <a href="#" class="know-more-btn">Know More</a>
+            </div>
+        </div>
+    </section>
+    <!-- Add this after your join-section -->
+<section class="sponsored-ads">
+  <h3 style="text-align: center;">Sponsored By</h3>
+  <div class="ads-row">
+    <div class="ad-card">
+      <img src="assets/brands-logo/images/ad1.jpg" alt="Ad 1">
+    </div>
+    <div class="ad-card">
+      <img src="assets/brands-logo/images/ad2.jpg" alt="Ad 2">
+    </div>
+    <div class="ad-card">
+      <img src="assets/brands-logo/images/ad3.jpg" alt="Ad 3">
+    </div>
+    <div class="ad-card">
+      <img src="assets/brands-logo/images/ad4.jpg" alt="Ad 3">
+    </div>
+    <div class="ad-card">
+      <img src="assets/brands-logo/images/ad5.jpg" alt="Ad 3">
+    </div>
+    <div class="ad-card">
+      <img src="assets/brands-logo/images/ad6.jpg" alt="Ad 3">
+    </div>
+   
+    <!-- Add more ad-card divs as needed -->
+  </div>
+</section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-columns">
+
+                <div class="footer-column">
+                    <div class="about-box1">
+                        <h3 class="footer-title">ABOUT</h3>
+                    </div>
+                    <ul class="footer-links">
+                        <li><a href="about.html"><i class="fas fa-chevron-right"></i> About Us</a></li>
+                        <li><a href="about.html#aims-objectives"><i class="fas fa-chevron-right"></i>Aims & Objectives</a></li>
+                        <li><a href="websitecommittee.html"><i class="fas fa-chevron-right"></i> Website Committee</a></li>
+                        <li><a href="about.html#facilities-member-services"><i class="fas fa-chevron-right"></i> Facility To Members</a></li>
+                    </ul>
+                </div>
+
+                <!-- Membership Column -->
+                <div class="footer-column">
+                    <h3 class="footer-title">MEMBERSHIP</h3>
+                    <ul class="footer-links">
+                        <li><a href="#"><i class="fas fa-chevron-right"></i> Member Login</a></li>
+                        <li><a href="#"><i class="fas fa-chevron-right"></i> Member Directory</a></li>
+                        <li><a href="#"><i class="fas fa-chevron-right"></i> How To Become A Member</a></li>
+                        <li><a href="#"><i class="fas fa-chevron-right"></i> Membership Benefits</a></li>
+                    </ul>
+                </div>
+
+                <!-- Contact Column -->
+                <div class="footer-column">
+                    <h3 class="footer-title">CONTACT</h3>
+                    <ul class="footer-links">
+                        <li><a href="contact.html"><i class="fas fa-chevron-right"></i> Contact Us</a></li>
+                        <li><a href="#"><i class="fas fa-chevron-right"></i> Useful Links</a></li>
+                        <li><a href="#"><i class="fas fa-chevron-right"></i> Feedback</a></li>
+                        <li><a href="#"><i class="fas fa-chevron-right"></i> Social Connect</a></li>
+                    </ul>
+                    <div class="social-icons">
+                        <a href="#" class="social-icon facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="social-icon twitter"><i class="fab fa-twitter"></i></a>
+                    </div>
+                </div>
+
+                <!-- Get In Touch Column -->
+                <div class="footer-column">
+                    <h3 class="footer-title">GET IN TOUCH</h3>
+                    <div class="contact-info">
+                        <div class="contact-item">
+                            <i class="fas fa-building"></i>
+                            <span>Poona Electric And Electronics Association
+                                627B, Bedekar Sadan, 3rd floor, Opp.Faraskhana Police Station, Nr.Dagduseth Ganpati
+                                Mandir, Budhwar Peth, Pune - 411002.</span>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-envelope"></i>
+                            <span>poonaelectricalassociation&#64;gmail.com</span>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-phone"></i>
+                            <span>Phone Number - 7972579597</span>
+                            <div class="logo-final">
+                                <img src="assets/brands-logo/PEEA_LOGO_2-removebg-preview.png" width="60px">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Footer Bottom -->
+        <div class="footer-bottom">
+            <div class="footer-container">
+                <p>© 2025 All Right Reserved by Poona Electric & Electronics Association
+                </p>
+            </div>
+        </div>
+    </footer>
+</body>
+
+
+
+
+
+    
