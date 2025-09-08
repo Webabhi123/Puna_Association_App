@@ -1,0 +1,13 @@
+<div class="admin-layout">
+  <app-sidebar 
+    [class.sidebar-expanded]="isSidebarOpen" 
+    [class.sidebar-collapsed]="!isSidebarOpen"
+    (sidebarToggled)="onSidebarToggled($event)" *ngIf="currentUserRole !== 'user'">
+  </app-sidebar>
+  <div 
+    class="admin-content" 
+    [class.main-content-expanded]="isSidebarOpen" 
+    [class.main-content-collapsed]="!isSidebarOpen">
+    <router-outlet></router-outlet>
+  </div>
+</div>

@@ -1,0 +1,60 @@
+<!-- Admin Sidebar -->
+<ng-container *ngIf="currentUserRole !== 'user'">
+  <nav id="sidebar" class="d-flex flex-column text-white vh-100 p-3"
+        [class.sidebar-collapse]="!isSidebarOpen"
+        [class.sidebar-expand]="isSidebarOpen">
+    <ul class="nav nav-pills flex-column mb-auto">
+      <li class="nav-item mb-1">
+        <a routerLink="/admin/user" class="nav-link text-white">
+          <i class="fa fa-user me-2"></i> Profile
+        </a>
+      </li>
+      <li class="nav-item mb-1" *ngIf="currentUserRole === 'superadmin'">
+        <a routerLink="/admin/event" class="nav-link text-white">
+          <i class="fa fa-calendar me-2"></i> Event Calendar
+        </a>
+      </li>
+      <li class="nav-item mb-1" *ngIf="currentUserRole === 'superadmin'">
+        <a routerLink="/admin/ads" class="nav-link text-white">
+          <i class="fa fa-calendar me-2"></i> Ads
+        </a>
+      </li>
+      <li class="nav-item mb-1">
+        <a routerLink="/admin/memberdirectory" class="nav-link text-white">
+          <i class="fa fa-user me-2"></i> Member Directory  
+        </a>
+      </li>
+      <li class="nav-item mb-1" *ngIf="currentUserRole === 'superadmin'">
+        <a routerLink="/admin/transport" class="nav-link text-white">
+          <i class="fa fa-truck me-2"></i> Transport  
+        </a>
+      </li>
+      <li class="nav-item mb-1" *ngIf="currentUserRole === 'superadmin'">
+        <a routerLink="/admin/bus-transport-data" class="nav-link text-white">
+          <i class="fa fa-bus me-2"></i> Bus Transport  
+        </a>
+      </li>
+      <li class="nav-item mb-1" *ngIf="currentUserRole === 'superadmin'">
+        <a routerLink="/admin/railway-transport-data" class="nav-link text-white">
+          <i class="fa fa-train me-2"></i> Train Transport  
+        </a>
+      </li>
+      <li class="nav-item mb-1" *ngIf="currentUserRole === 'superadmin'">
+        <a routerLink="/admin/logistics-transport-data" class="nav-link text-white">
+          <i class="fa fa-truck me-2"></i> Logistics Transport  
+        </a>
+      </li>
+      <li class="nav-item mb-1">
+        <a routerLink="" (click)="logout()" class="nav-link text-white">
+          <i class="fa fa-sign-out me-2"></i> Log Out  
+        </a>
+      </li>
+    </ul>
+  </nav>
+  <!-- Toggle Button -->
+  <button class="sidebar-toggle-btn" (click)="toggleSidebar()" [ngClass]="isSidebarOpen ? 'sidebar-btn-expanded' : 'sidebar-btn-collapsed'">
+    <fa-icon [icon]="faBars" class="text-black"></fa-icon>
+  </button>
+</ng-container>
+
+

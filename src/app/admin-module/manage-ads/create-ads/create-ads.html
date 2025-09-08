@@ -1,0 +1,16 @@
+<form (ngSubmit)="onSubmit()" enctype="multipart/form-data">
+  <div class="form-group">
+    <label for="image">Advertisement Image</label>
+    <input type="file" id="image" (change)="onFileSelected($event)" accept="image/*" class="form-control" [required]="!adId">
+    <div *ngIf="imageUrl" class="mt-2">
+      <img [src]="getImageUrl(imageUrl)" alt="Ad Image" width="100" height="60" />
+    </div>
+  </div>
+
+  <div class="form-group">
+    <label for="slotNumber">Slot Number</label>
+    <input type="number" id="slotNumber" [(ngModel)]="slotNumber" name="slotNumber" class="form-control" required>
+  </div>
+
+  <button type="submit" class="btn btn-primary" [disabled]="!slotNumber">{{ adId ? 'Update Advertisement' : 'Create Advertisement' }}</button>
+</form>

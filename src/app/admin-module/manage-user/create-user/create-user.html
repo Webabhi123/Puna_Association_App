@@ -1,0 +1,294 @@
+<div class="container">
+  <!-- <div class="card mt-2 bg-light"> -->
+    <!-- <h3 class="mb-4">Create New User</h3> -->
+    <div class="card-body bg-light">
+     <h3 class="mb-4">{{ isEditMode ? 'Update User' : 'Create New User' }}</h3>
+
+    <form #userForm="ngForm" (ngSubmit)="onSubmit(userForm)" enctype="multipart/form-data">
+      <div class="row mb-3">
+        <h5 class="mb-4">Company Details</h5>
+      <div class="col-md-4">
+        <label class="form-label">Name of Firm</label>
+        <input type="text" name="nameOfFirm" [(ngModel)]="user.nameOfFirm" class="form-control input-small" [disabled]="isEditMode && currentUserRole === 'user'" />
+      </div>
+      <div class="col-md-4">
+        <label class="form-label">Business Address</label>
+        <input type="text" name="address" [(ngModel)]="user.address" class="form-control input-small" />
+      </div>
+      <div class="col-md-4">
+        <label class="form-label">City</label>
+        <input type="text" name="city" [(ngModel)]="user.city" class="form-control input-small" />
+      </div>
+      <div class="col-md-4">
+        <label class="form-label">State</label>
+        <input type="text" name="state" [(ngModel)]="user.state" class="form-control input-small"  />
+      </div>
+      <div class="col-md-4">
+        <label class="form-label">Pin Code</label>
+        <input type="text" name="pinCode" [(ngModel)]="user.pinCode" class="form-control input-small" />
+      </div>
+      <div class="col-md-4">
+        <label class="form-label">Email Id</label>
+        <input type="text" name="businessEmail" [(ngModel)]="user.businessEmail" class="form-control input-small"  />
+      </div>
+      <div class="col-md-4">
+        <label class="form-label">Website</label>
+        <input type="text" name="website" [(ngModel)]="user.website" class="form-control input-small" />
+      </div>
+      <div class="col-md-4">
+        <label class="form-label">Landline 1</label>
+        <input type="text" name="landLine" [(ngModel)]="user.landLine" class="form-control input-small" />
+      </div>
+      <!-- <div class="col-md-4">
+        <label class="form-label">Landline 1</label>
+        <input type="text" name="officeTelephone1" [(ngModel)]="user.officeTelephone1" class="form-control input-small" />
+      </div> -->
+      <div class="col-md-4">
+        <label class="form-label">Intercom 1</label>
+        <input type="text" name="intercomNumber" [(ngModel)]="user.intercomNumber" class="form-control input-small" />
+      </div>
+      <div class="col-md-4">
+        <label class="form-label">Fax 1</label>
+        <input type="text" name="fax" [(ngModel)]="user.fax" class="form-control input-small" />
+      </div>
+      <div class="col-md-4">
+        <label class="form-label">Mobile Number 2</label>
+        <input type="text" name="mobileNumber" [(ngModel)]="user.mobileNumber" class="form-control input-small" />
+      </div>
+      <div class="col-md-4">
+        <label class="form-label">Whatsapp Number 1</label>
+        <input type="text" name="whatsappNumber" [(ngModel)]="user.whatsappNumber" class="form-control input-small" />
+      </div>
+      <div class="col-md-4">
+        <label class="form-label">GST No</label>
+        <input type="text" name="gst" [(ngModel)]="user.gst" class="form-control input-small"  />
+      </div>
+      <div class="col-md-4">
+        <label class="form-label">Pan No.</label>
+        <input type="text" name="panNumber" [(ngModel)]="user.panNumber" class="form-control input-small" style="text-transform: uppercase;" />
+      </div>
+      <div class="col-md-4">
+        <label class="form-label">Udhyog Aadhar/MSME No.</label>
+        <input type="text" name="udyogAdharNumber" [(ngModel)]="user.udyogAdharNumber" class="form-control input-small" />
+      </div>
+      <div class="col-md-4">
+        <label class="form-label">Date of Establishment</label>
+        <input type="date" name="dateOfEstablishment" [(ngModel)]="user.dateOfEstablishment" class="form-control input-small"  />
+      </div>
+      <div class="col-md-4">
+        <label class="form-label">Company Registration (CIN) No.</label>
+        <input type="text" name="companyRegistrationNumber" [(ngModel)]="user.companyRegistrationNumber" class="form-control input-small"  />
+      </div>
+      <div class="col-md-4">
+        <label class="form-label">Export/Import No.</label>
+        <input type="text" name="exportImportNumber" [(ngModel)]="user.exportImportNumber" class="form-control input-small" />
+      </div>
+      <div class="col-md-4">
+        <label class="form-label">GST Certificate</label>
+        <input type="file" name="gstFilePath" (change)="onGstFileSelected($event)" class="form-control input-small" accept="image/*,application/pdf" />
+        
+      </div>
+      <div class="col-md-4">
+        <label class="form-label">Type of Bussiness</label>
+        <select
+        name="authority"
+        [(ngModel)]="user.authority"
+        class="form-select"
+        >
+        <option value="">Select Authorites</option>
+        <option value="Proprietor">Proprietor</option>
+        <option value="Partnership">Partnership</option>
+        <option value="Pvt Ltd">Pvt Ltd</option>
+        <option value="Others">Others</option>
+      </select>
+      </div>
+      <div class="col-md-4">
+        <label class="form-label">MembershipType</label>
+        <input type="text" name="membershipType" [(ngModel)]="user.membershipType" class="form-control input-small"   />
+      </div>
+      <div class="col-md-4">
+        <label class="form-label">Status</label>
+        <select
+        name="status"
+        [(ngModel)]="user.status"
+        class="form-select"
+        >
+        <option value="">Select Status</option>
+        <option value="Active">Active</option>
+        <option value="Inactive">Inactive</option>
+      </select>
+      </div>
+      <div class="col-md-4">
+        <label class="form-label">Google Direction Link</label>
+        <input type="text" name="googleDirectionLink" [(ngModel)]="user.googleDirectionLink" class="form-control input-small"  />
+      </div>
+      <div class="col-md-4">
+        <label class="form-label">Mode of Bussiness</label>
+        <input type="text" name="modeOfBusiness" [(ngModel)]="user.modeOfBusiness" class="form-control input-small" />
+      </div>
+      <div class="col-md-4">
+        <label class="form-label">Detailing in Product Services</label>
+        <input type="text" name="detailingInProductServices" [(ngModel)]="user.detailingInProductServices" class="form-control input-small" />
+      </div>
+      <!-- <div class="col-md-4">
+        <label class="form-label">Address</label>
+        <input type="text" name="address" [(ngModel)]="user.address" class="form-control input-small"  />
+      </div> -->
+      <hr>
+      <h5 class="mb-4">User Details</h5>
+      <div class="col-md-4">
+        <label class="form-label">UserEmail</label>
+        <input type="email" name="userEmail" [(ngModel)]="user.userEmail" class="form-control input-small" required />
+      </div>
+      <div class="col-md-4">
+        <label class="form-label">Phone Number</label>
+        <input type="text" name="phoneNumber" [(ngModel)]="user.phoneNumber" class="form-control input-small" required />
+      </div> 
+      <div class="col-md-4">
+        <label class="form-label">Photo</label>
+        <input type="file" name="photo" (change)="onPhotoSelected($event)" class="form-control input-small" accept="image/*" />
+      </div>
+      <hr>
+      <h5 class="mb-4">Personal Details</h5>
+      <div class="col-md-4">
+        <label class="form-label">Owner Name</label>
+        <input type="text" name="ownerName" [(ngModel)]="user.ownerName" class="form-control input-small"   />
+      </div>
+      <div class="col-md-4">
+        <label class="form-label">Resident</label>
+        <input type="text" name="resident" [(ngModel)]="user.resident" class="form-control input-small" />
+      </div>
+      <div class="col-md-4">
+        <label class="form-label">Mobile number</label>
+        <input type="number" name="mobileNumber" [(ngModel)]="user.mobileNumber" class="form-control input-small"  />
+      </div>
+      <div class="col-md-4">
+        <label class="form-label">LandLine number</label>
+        <input type="number" name="personalPhoneNumber" [(ngModel)]="user.personalPhoneNumber" class="form-control input-small"  />
+      </div>
+      <div class="col-md-4">
+        <label class="form-label">Pan number</label>
+        <input type="text" name="personalPanNumber" [(ngModel)]="user.personalPanNumber" class="form-control input-small" style="text-transform: uppercase;"  />
+      </div>
+      <div class="col-md-4">
+        <label class="form-label">Blood Group</label>
+        <input type="text" name="bloodGroup" [(ngModel)]="user.bloodGroup" class="form-control input-small"  />
+      </div>
+      <div class="col-md-4">
+        <label class="form-label">Date of Birth</label>
+        <input type="date" name="dateOfBirth" [(ngModel)]="user.dateOfBirth" class="form-control input-small"  />
+      </div>
+      <div class="col-md-4">
+        <label class="form-label">Email</label>
+        <input type="text" name="personalEmail" [(ngModel)]="user.personalEmail" class="form-control input-small"  />
+      </div>
+      <!-- <div class="col-md-4">
+        <label class="form-label">Vat Reg No.</label>
+        <input type="text" name="vatRegNo" [(ngModel)]="user.vatRegNo" class="form-control input-small" />
+      </div> -->
+      <div class="col-md-4">
+        <label class="form-label">Aadhar No.</label>
+        <input type="text" name="aadharNumber" [(ngModel)]="user.aadharNumber" class="form-control input-small" />
+      </div>
+      <div class="col-md-4">
+        <label class="form-label">Other Reg No.</label>
+        <input type="text" name="otherRegNo" [(ngModel)]="user.otherRegNo" class="form-control input-small"  />
+      </div>
+      <div class="col-md-4">
+        <label class="form-label">Role</label>
+        <select
+          name="userRole"
+          [(ngModel)]="user.userRole"
+          class="form-select"
+          required>
+          <option value="">Select Role</option>
+          <option value="user">User</option>
+          <option *ngIf="currentUserRole === 'superadmin'" value="superadmin">Superadmin</option>
+        </select>
+      </div>
+    <hr>      
+    </div>
+    <!-- </form> -->
+
+  <div id="addUserForm" class="collapse">
+    <!-- <div class="card-body bg-light"> -->
+     <!-- <form #addUserForm="ngForm" (ngSubmit)="onSubmit(userForm)" enctype="multipart/form-data"> -->
+       <hr>
+       <h5 class="mb-4">Personal Details</h5>
+       <div class="row mb-3">
+       <div class="col-md-4">
+         <label class="form-label">Owner Name</label>
+         <input type="text" name="addOwnerName" [(ngModel)]="user.addOwnerName" class="form-control input-small"  />
+       </div>
+       <div class="col-md-4">
+         <label class="form-label">Resident</label>
+         <input type="text" name="addResident" [(ngModel)]="user.addResident" class="form-control input-small" />
+       </div>
+       <!-- <div class="col-md-4">
+         <label class="form-label">Address</label>
+         <input type="text" name="address" [(ngModel)]="user.address" class="form-control input-small"  />
+       </div> -->
+       <div class="col-md-4">
+         <label class="form-label">Mobile number</label>
+         <input type="number" name="addMobileNumber" [(ngModel)]="user.addMobileNumber" class="form-control input-small"  />
+       </div>
+       <div class="col-md-4">
+         <label class="form-label">LandLine number</label>
+         <input type="number" name="addLandLineNumber" [(ngModel)]="user.addLandLineNumber" class="form-control input-small"  />
+       </div>
+       <div class="col-md-4">
+         <label class="form-label">Pan number</label>
+         <input type="text" name="addPanNumber" [(ngModel)]="user.addPanNumber" class="form-control input-small"  />
+       </div>
+       <div class="col-md-4">
+         <label class="form-label">Blood Group</label>
+         <input type="text" name="addBloodGroup" [(ngModel)]="user.addBloodGroup" class="form-control input-small"  />
+       </div>
+       <div class="col-md-4">
+         <label class="form-label">Date of Birth</label>
+         <input type="date" name="addDateOfBirth" [(ngModel)]="user.addDateOfBirth" class="form-control input-small"  />
+       </div>
+       <div class="col-md-4">
+         <label class="form-label">Email</label>
+         <input type="text" name="addEmail" [(ngModel)]="user.addEmail" class="form-control input-small"  />
+       </div>
+       <!-- <div class="col-md-4">
+         <label class="form-label">Vat Reg No.</label>
+         <input type="text" name="vatRegNo" [(ngModel)]="newUser.vatRegNo" class="form-control input-small" />
+       </div> -->
+       <div class="col-md-4">
+         <label class="form-label">Other</label>
+         <input type="text" name="addOtherRegNo" [(ngModel)]="user.addOtherRegNo" class="form-control input-small"  />
+       </div>
+       <div class="col-md-4">
+         <label class="form-label">Role</label>
+         <select
+           name="addUserRole"
+           [(ngModel)]="user.addUserRole"
+           class="form-select"
+           >
+           <option value="">Select Role</option>
+           <option value="user">User</option>
+           <option *ngIf="currentUserRole === 'superadmin'" value="superadmin">Superadmin</option>
+         </select>
+       </div>
+       </div>
+       </div>
+       <div class="row mb-3">
+        <div class="col-12 d-flex justify-content-between align-items-center">
+          <div>
+            <button type="submit" class="btn btn-primary me-2">
+              {{ isEditMode ? 'Update User' : 'Create User' }}
+            </button>
+            <button class="btn btn-outline-primary" type="button" data-bs-toggle="collapse" data-bs-target="#addUserForm" aria-expanded="false" aria-controls="addUserForm">
+              <i class="bi bi-plus-circle me-1"></i> Add Another User
+            </button>
+          </div>
+        </div>
+      </div>
+     <!-- </div> -->
+      </form>
+  <!-- </div> -->
+   </div>
+  <!-- </div> -->
+</div>

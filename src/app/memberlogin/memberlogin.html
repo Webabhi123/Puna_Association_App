@@ -1,0 +1,98 @@
+<div class="login-container">
+  <div class="login-page">
+    <!-- Left Side - Image -->
+    <div class="image-section">
+      <!-- Background image is set in CSS -->
+    </div>
+    
+    <!-- Right Side - Form -->
+    <div class="form-section">
+      <div class="form-container">
+    <div class="logo-container">
+        <img src="assets/brands-logo/PEEA_LOGO_1-removebg-preview.png" alt="PEEA Logo" class="logo-img">
+    </div>
+    <h2>Sign in to Start Session</h2>
+    
+    <form [formGroup]="loginForm" class="login-form" (ngSubmit)="onSubmit()">
+        <!-- Email Input -->
+        <div class="form-group">
+            <label for="email">Email</label>
+            <div class="input-group">
+                <input  
+                    type="email" 
+                    id="email" 
+                    formControlName="userEmail" 
+                    placeholder="Enter your email"
+                    class="form-control"
+                >
+            </div>
+        </div>
+        <p class="text-center">Or</p>
+        <!-- Phone Input -->
+        <div class="form-group">
+            <label for="phone">Phone Number</label>
+            <div class="input-group">
+                <input 
+                    type="tel" 
+                    id="phone" 
+                    formControlName="phoneNumber" 
+                    placeholder="Enter your phone number"
+                    class="form-control"
+                    maxlength="15"
+
+                >
+            </div>
+        </div>
+
+        <!-- OTP Input (initially hidden) -->
+        <div class="form-group" >
+            <label for="otp">Enter OTP</label>
+            <div class="otp-input-group">
+                <input 
+                    type="text" 
+                    id="otp" 
+                    formControlName="otp" 
+                    placeholder="Enter 6-digit OTP"
+                    class="form-control otp-input"
+                    maxlength="6"
+                >
+            </div>
+        </div>
+        <div class="form-buttons">
+        <!-- Submit Button -->
+        <button 
+            type="submit" 
+            class="btn btn-primary btn-block" >
+            Submit
+        </button>
+        <button 
+        type="button" 
+        class="btn btn-outline-primary otp-button"
+        (click)="sendOtp()"
+    >
+        Send OTP
+    </button>
+</div>
+    </form>
+  </div>
+</div>
+    <div id="forgotPasswordModal" class="forgot-modal">
+  <div class="forgot-modal-content">
+    <button type="button" class="forgot-modal-close">&times;</button>
+    <h2 class="forgot-modal-title">Forget Password</h2>
+    <form id="forgotForm" autocomplete="off">
+      <div class="forgot-modal-input-group">
+        <input type="text" placeholder="Email" name="email" required class="forgot-modal-input">
+        <span class="forgot-modal-icon"><i class="fa-regular fa-envelope"></i></span>
+      </div>
+      <div class="forgot-modal-btn-group">
+        <button type="submit" class="forgot-modal-submit">Submit</button>
+      </div>
+      <div class="forgot-modal-btn-group">
+        <button type="button" class="forgot-modal-close-btn">Close</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,260 @@
+body {
+    margin: 0;
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #fff;
+}
+
+.about-container {
+    padding: 60px 5%;
+    text-align: center;
+}
+
+.about-container h2 {
+    font-size: 42px;
+    color: #111;
+    font-weight: 300;
+    margin-bottom: 50px;
+}
+
+.about-container h2 span {
+    color: #002366;
+    font-weight: 600;
+}
+
+.about-box {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    /* background: #3b5fbf; */
+    background-image: linear-gradient(to right, #686ee2, #33388d);
+    border-radius: 80px 0px 80px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    animation: fadeInUp 1s ease-in-out;
+}
+
+/* .about-left {
+    background-image: url(/assets/brands-logo/bg.jpg);
+} */
+
+.about-right {
+    /* background-image: url(/assets/brands-logo/p-icon.png); */
+    background-repeat: no-repeat;
+}
+
+.about-left,
+.about-right {
+    flex: 1 1 50%;
+    padding: 50px;
+    color: #fff;
+    text-align: left;
+}
+
+.about-left h3,
+.about-right h3 {
+    font-size: 26px;
+    margin-bottom: 20px;
+    color: #fff;
+}
+
+.about-left p,
+.about-right p {
+    font-size: 18px;
+    line-height: 1.7;
+    margin-bottom: 20px;
+}
+
+.about-right button {
+    background-color: orange;
+    color: #333;
+    padding: 12px 24px;
+    font-size: 16px;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.about-right button:hover {
+    background-color: #ff9900;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(40px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@media (max-width: 768px) {
+    .about-box {
+        flex-direction: column;
+        border-radius: 20px;
+    }
+
+    .about-left,
+    .about-right {
+        padding: 30px 20px;
+        text-align: center;
+    }
+}
+.download-btn{
+    display:inline-block;
+    margin-top:10px;
+    padding:10px 20px;
+    background:#33388d;
+    color:#fff;
+    border-radius:6px;
+    text-decoration:none;
+}
+#membershipModal,
+#membershipModal * {
+    color: #222 !important;
+}
+
+#membershipModal input,
+#membershipModal label {
+    color: #222 !important;
+}
+
+.modal-overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 9999;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content {
+    background: #fff;
+    max-width: 460px;
+    width: 90%;
+    margin: auto;
+    padding: 12px 24px;
+    border-radius: 12px;
+    position: relative;
+}
+
+.close-button {
+    position: absolute;
+    top: 10px;
+    right: 16px;
+    background: none;
+    border: none;
+    font-size: 22px;
+    cursor: pointer;
+}
+
+.modal-header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 18px;
+    text-align: center;
+}
+
+.logo-container {
+    margin-bottom: 15px;
+}
+
+.modal-logo {
+    max-width: 120px;
+    height: auto;
+}
+
+.title-container {
+    width: 100%;
+}
+
+.modal-title {
+    margin: 0 0 8px 0;
+    font-size: 1.1rem;
+    line-height: 1.4;
+}
+
+/* Form Styles */
+.enquiry-form {
+    width: 100%;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.enquiry-form input[type="text"],
+.enquiry-form input[type="email"],
+.enquiry-form input[type="tel"],
+.enquiry-form textarea {
+    width: 100%;
+    padding: 12px 15px;
+    border: 1px solid #e1e1e1;
+    border-radius: 4px;
+    font-size: 14px;
+    color: #333;
+    background-color: #f9f9f9;
+    transition: all 0.3s ease;
+}
+
+.enquiry-form input[type="text"]:focus,
+.enquiry-form input[type="email"]:focus,
+.enquiry-form input[type="tel"]:focus,
+.enquiry-form textarea:focus {
+    outline: none;
+    border-color: #33388d;
+    background-color: #fff;
+    box-shadow: 0 0 0 2px rgba(51, 56, 141, 0.1);
+}
+
+.enquiry-form textarea {
+    min-height: 100px;
+    resize: vertical;
+}
+
+.submit-btn {
+    width: 100%;
+    padding: 12px 20px;
+    background: #33388d;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.submit-btn:hover {
+    background: #2a2e7a;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.submit-btn:active {
+    transform: translateY(0);
+}
+
+/* Placeholder text color */
+::placeholder {
+    color: #999;
+    opacity: 1;
+}
+
+:-ms-input-placeholder {
+    color: #999;
+}
+
+::-ms-input-placeholder {
+    color: #999;
+}

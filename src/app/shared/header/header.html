@@ -1,0 +1,27 @@
+   <div class="main-header">
+        <div class="logo">
+            <img src="assets/brands-logo/PEEA_LOGO_1-removebg-preview.png" alt="Logo" />
+            <div class="logo-text">
+                <h1>Poona<span> Electric &</span> Electronics Association</h1>
+                <small>POONA ELECTRIC & ELECTRONICS ASSOCIATION (PEEA) </small>
+            </div>
+        </div>
+        <div class="search-bar">
+            <select>
+                <option>Product/Category</option>
+                <option>Brand</option>
+            </select>
+            <input type="text"
+             placeholder="Search by Brands or Products..."
+             [(ngModel)]="searchQuery"
+            (input)="onSearchInput()"
+            (focus)="onSearchInput()"
+            autocomplete="off" />
+            <button><i class="fa-solid fa-magnifying-glass"></i></button>
+            <ul *ngIf="showSuggestions" class="suggestions-list">
+                <li *ngFor="let cat of filteredCategories" (click)="selectCategory(cat)">
+                  {{ cat.name }}
+                </li>
+              </ul>
+        </div>
+    </div>

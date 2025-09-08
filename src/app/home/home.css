@@ -1,0 +1,361 @@
+.ads-grid-section {
+  margin: 32px auto 24px auto;
+  padding: 24px 0;
+  background: #f7f8fa;
+  border-radius: 16px;
+  box-shadow: 0 4px 24px rgba(104, 110, 226, 0.07);
+  max-width: 1200px;
+}
+
+.ads-grid-title {
+  text-align: center;
+  font-size: 1.7rem;
+  color: #33388d;
+  font-weight: 600;
+  margin-bottom: 18px;
+}
+
+.ads-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(6, 1fr);
+  gap: 18px;
+  justify-items: center;
+  align-items: center;
+  padding: 0 100px;
+}
+
+.ad-box {
+  /* background: #fff; */
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(104, 110, 226, 0.10);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  min-height: 300px;
+  max-width: 250px;
+  max-height: 300px;
+  overflow: hidden;
+  padding: 10px;
+}
+
+.ad-box img {
+  max-width: 100%;
+  max-height: 250px;
+  object-fit: contain;
+  display: block;
+  margin: 0 auto;
+}
+
+@media (max-width: 900px) {
+  .ads-grid {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(12, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .ads-grid {
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(24, 1fr);
+  }
+
+  .ad-box {
+    max-width: 100%;
+    min-height: 80px;
+  }
+}
+
+/* Founder Section */
+.founder-section {
+  padding: 50px 20px;
+  background-color: #ffffff;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.founder-text {
+  max-width: 850px;
+  margin: 0 auto;
+  padding: 0 30px;
+}
+
+.founder-text h2 {
+  text-align: center;
+  margin-bottom: 35px;
+  color: #2c3e50;
+  font-size: 2.2rem;
+  font-weight: 600;
+  line-height: 1.3;
+}
+
+.founder-text h2 span {
+  color: #002366;
+  font-weight: 700;
+}
+
+.founder-text p {
+  line-height: 1.8;
+  color: #4a5568;
+  text-align: left;
+  margin-bottom: 25px;
+  font-size: 1.1rem;
+  letter-spacing: 0.3px;
+  hyphens: auto;
+  word-wrap: break-word;
+  text-rendering: optimizeLegibility;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .founder-section {
+    padding: 30px 15px;
+  }
+
+  .founder-text {
+    padding: 0 15px;
+  }
+
+  .founder-text h2 {
+    font-size: 1.8rem;
+    margin-bottom: 25px;
+  }
+
+  .founder-text p {
+    font-size: 1rem;
+    line-height: 1.7;
+  }
+}
+
+/* Sponsor logos animation container */
+
+.sponsor-logos-container {
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+  padding: 0 0;
+  background: #f9f9f9;
+  margin: 20px 0;
+}
+
+.sponsor-logos-track {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  animation: scroll 40s linear infinite;
+  width: max-content;
+  will-change: transform;
+  /* Ensure smooth animation */
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+  padding: 20px 0;
+}
+
+.sponsor-logo {
+  flex: 0 0 auto;
+  width: 120px;
+  height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.sponsor-logo img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+  /* filter: grayscale(100%); */
+  opacity: 0.7;
+  transition: all 0.3s ease;
+}
+
+.sponsor-logo:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.sponsor-logo:hover img {
+  filter: grayscale(0%);
+  opacity: 1;
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+
+  100% {
+    transform: translateX(calc(-50% - 15px));
+  }
+}
+
+/* Ensure smooth animation on all browsers */
+@-webkit-keyframes scroll {
+  0% {
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+  }
+
+  100% {
+    -webkit-transform: translateX(calc(-50% - 15px));
+    transform: translateX(calc(-50% - 15px));
+  }
+}
+
+/* Pause animation on hover */
+.sponsor-logos-container:hover .sponsor-logos-track {
+  animation-play-state: paused;
+}
+
+/* for sponsored-logos-section */
+.sponsor-logos-grid {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 32px 28px;
+  justify-items: center;
+  align-items: center;
+  padding: 0 18px;
+}
+
+.sponsor-logo {
+  background: #fff;
+  border-radius: 18px;
+  box-shadow: 0 4px 18px rgba(104, 110, 226, 0.13);
+  padding: 28px 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* transition: transform 0.25s cubic-bezier(.4,2,.6,1), box-shadow 0.18s; */
+  min-height: 130px;
+  min-width: 130px;
+  max-width: 200px;
+  max-height: 140px;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  --wd-link-color: var(--color-gray-500);
+  color: var(--wd-link-color);
+}
+
+.sponsor-logo:hover {
+  transform: scale(1.13) rotate(-2deg);
+  box-shadow: 0 12px 36px rgba(104, 110, 226, 0.22);
+  background: linear-gradient(90deg, #f7f8fa 60%, #e7eaff 100%);
+}
+
+.sponsor-logo img {
+  /* filter: grayscale(1) brightness(0.2); */
+  /* filter: grayscale(0); */
+  --wd-link-color: var(--color-gray-500);
+  color: var(--wd-link-color);
+  transition: filter 0.3s;
+  max-width: 160px;
+  max-height: 100px;
+  object-fit: contain;
+  /* filter: grayscale(0.15) brightness(0.98) drop-shadow(0 2px 8px #686ee2aa);
+  transition: filter 0.22s, transform 0.22s; */
+}
+
+.sponsor-logo:hover img {
+  filter: grayscale(0);
+}
+
+.sponsor-swiper {
+  overflow: hidden;
+}
+
+/* Increase the logo container size */
+.sponsor-logo {
+  min-width: 180px;
+  min-height: 180px;
+  max-width: 240px;
+  max-height: 180px;
+  padding: 36px 24px;
+}
+
+/* Increase the image size inside the logo */
+.sponsor-logo img {
+  max-width: 200px;
+  max-height: 120px;
+}
+
+@media (max-width: 700px) {
+  .sponsor-logos-grid {
+    grid-template-columns: repeat(auto-fit, minmax(90px, 1fr));
+    gap: 18px 10px;
+  }
+
+  .sponsor-logo {
+    padding: 10px 4px;
+    min-height: 60px;
+    min-width: 60px;
+    max-width: 90px;
+    max-height: 70px;
+  }
+
+  .sponsor-logo img {
+    max-width: 70px;
+    max-height: 40px;
+  }
+}
+
+body {
+  position: relative;
+  min-height: 100%;
+  top: -5px !important;
+}
+
+/* Optional: hide the mini translate icon in bottom corner */
+.goog-te-gadget-icon {
+  display: none !important;
+}
+
+
+.skiptranslate {
+  visibility: hidden !important;
+}
+
+/* Ad box styles  */
+ .zoomable-img {
+  cursor: zoom-in;
+  transition: transform 0.2s ease;
+}
+
+.zoom-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+}
+
+.zoomed-image {
+  max-width: 90%;
+  max-height: 90%;
+  border-radius: 8px;
+  box-shadow: 0 0 15px #000;
+}
+
+/* Make sponsor logos clickable */
+.sponsor-logo {
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.sponsor-logo:hover {
+  transform: scale(1.05);
+}
+
+.sponsor-logo img {
+  transition: transform 0.3s ease;
+}

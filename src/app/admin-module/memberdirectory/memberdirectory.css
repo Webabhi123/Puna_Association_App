@@ -1,0 +1,153 @@
+@media(min-width:1000px){
+    .table-responsive{
+      overflow-wrap: anywhere!important;
+    }
+  }
+  
+  @media(max-width:768px){
+    .table-responsive{
+      overflow-wrap:normal!important;
+    }
+  }
+
+/* Member Directory Container */
+.member-directory-container {
+  padding: 2rem 0;
+}
+
+/* Search Container */
+.search-container {
+  position: relative;
+  margin-bottom: 2rem;
+}
+
+.search-container .input-group {
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  border-radius: 50px;
+  overflow: hidden;
+}
+
+.search-container .form-control {
+  border: 1px solid #e0e0e0;
+  padding: 0.75rem 1.5rem;
+  border-radius: 50px 0 0 50px;
+  border-right: none;
+}
+
+.search-container .btn {
+  border-radius: 0 50px 50px 0;
+  padding: 0 1.5rem;
+  background-image: linear-gradient(to right, #686ee2, #33388d);
+  border: none;
+}
+
+/* Suggestions Dropdown */
+.suggestions {
+  position: absolute;
+  width: 100%;
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+  margin-top: 4px;
+  max-height: 300px;
+  overflow-y: auto;
+}
+
+.suggestion-item {
+  padding: 0.75rem 1.5rem;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.suggestion-item:hover {
+  background-color: #f8f9fa;
+}
+
+/* Member Cards */
+.member-card {
+  border: none;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  height: 100%;
+  overflow: hidden;
+  margin-bottom: 1.5rem;
+}
+
+.member-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+}
+
+.member-card .card-header {
+  padding: 1.25rem;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+  background-image: linear-gradient(to right, #686ee2, #33388d);
+}
+
+.member-card .card-body {
+  padding: 1.5rem;
+}
+
+/* Info Items */
+.info-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 0.75rem;
+  color: #4a4a4a;
+  font-size: 0.95rem;
+}
+
+.info-item:last-child {
+  margin-bottom: 0;
+}
+
+.info-item i {
+  width: 20px;
+  color: #4e73df;
+  text-align: center;
+  margin-right: 10px;
+}
+
+.info-item .address {
+  display: -webkit-box;
+  /*  -webkit-line-clamp: 2; */
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .search-container {
+    padding: 0 15px;
+  }
+  
+  .member-card {
+    margin-bottom: 1.5rem;
+  }
+}
+
+/* No Results */
+.text-center.py-5 {
+  background: #f8f9fa;
+  border-radius: 10px;
+  margin-top: 2rem;
+  padding: 3rem 1rem;
+}
+
+.text-center.py-5 i {
+  color: #d1d3e2;
+  margin-bottom: 1rem;
+}
+
+/* Animation */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.member-card {
+  animation: fadeIn 0.3s ease-out forwards;
+}

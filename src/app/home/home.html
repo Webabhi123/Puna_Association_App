@@ -1,396 +1,245 @@
-<body>
-      <!-- Top Bar -->
-    <div class="top-bar">
-        <div class="left">
-            <i class="fa-solid fa-phone"></i> 7972579597 &nbsp;|&nbsp; <i class="fa-solid fa-envelope"></i> peeapune1&#64;gmail.com
-        </div>
-        <div class="right">
-            <a href="MemberLogin.html">Member's Login</a>
-            <a href="#">Member Search</a>
-            <a href="#">Just Click</a>
-        </div>
-    </div>
-
-    <!-- Main Header -->
-    <div class="main-header">
-        <div class="logo">
-            <!-- <img src="brands-logo/PEEA_LOGO_1-removebg-preview.png" alt="Logo" /> -->
-            <!-- <img src="assets/brands-logo/PEEA_LOGO_1-removebg-preview" alt="Logo"> -->
-             <img src="assets/brands-logo/PEEA_LOGO_1-removebg-preview.png" alt="">
-            <div class="logo-text">
-                <h1>Poona<span> Electric &</span> Electronics Association</h1>
-                <small>POONA ELECTRIC & ELECTRONICS ASSOCIATION (PEEA) </small>
+<div class="main-container">
+    <!-- SECTION 1: SLIDER -->
+    <div class="slider-container">
+        <div class="slides" id="slides">
+            <div class="slide slide1">
+                <img src="assets/images/main-image.jpg" class="img-fluid" />
+            </div>
+            <div class="slide slide2">
+                <img src="assets/images/main-image2.jpg" class="img-fluid" />
+            </div>
+            <div class="slide slide3">
+                <img src="assets/images/main-image3.jpg" class="img-fluid" />
+            </div>
+            <div class="slide slide4">
+                <img src="assets/images/main-image4.jpg" class="img-fluid" />
             </div>
         </div>
-        <div class="search-bar">
-            <select>
-                <option>Product/Category</option>
-                <option>Wires</option>
-                <option>LEDs</option>
-            </select>
-            <input type="text" placeholder="Search by Brands or Products..." />
-            <button><i class="fa-solid fa-magnifying-glass"></i></button>
+
+        <div class="buttons">
+            <button class="btn" id="prev">
+            </button>
+            <button class="btn" id="next"> > </button>
+        </div>
+
+        <div class="dots" id="dots">
+            <span class="dot active"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
         </div>
     </div>
-
-    <!-- Navigation Bar -->
-<nav class="navbar">
-        <button class="navbar-toggle" onclick="toggleNavbar()">☰</button>
-        <ul id="navbarMenu">
-            <li><a href="index.html"><i class="fa-solid fa-house"></i></a></li>
-                <li><a href="about.html">About Us</a>
-                <div class="dropdown">
-                    <!-- <a href="#">President's Desk</a> -->
-                    <a routerLink="/about" routerLinkActive="active">About Us</a>
-                    <a routerLink="/keyinitiative">Key Initiatives</a>
-                    <a href="about.html#aims-objectives">History Of PEEA</a>
-                    <a href="PresidentDesk.html">President's desk</a>
-                    <!-- <a href="#">Past President</a> -->
-                    <a href="about.html#facilities-member-services">Facility To Members</a>
-                </div>
-            </li>
-            <li><a href="#">COMMITTEE</a>
-                <div class="dropdown">
-                    <a href="managecommittee.html" target="_blank">Managing</a>
-                    <a href="websitecommittee.html" target="_blank">Website</a>
-                    <a href="activitycommittee.html" target="_blank">Activity</a>
-                    <a href="activitycommittee.html" target="_blank">Past President</a>
-                </div>
-            </li>
-            <li><a href="#">MEMBERSHIP</a>
-                <!-- <div class="dropdown">
-                    <a href="#">Member Login</a>
-                    <a href="#">Member Search</a>
-                    <a href="#">Become a Member</a>
-                </div> -->
-            </li>
-            <li><a href="#">CATEGORIES</a></li>
-                <!-- <div class="dropdown">
-                    <a href="ProductPromotion.html" target="_blank">Product Promotion</a>
-                    <a href="TechnicalSupport.html" target="_blank">Technical Support</a>
-                    <a href="Consultancy.html" target="_blank">Consultancy</a>
-                    <a href="TradeEvent.html" target="_blank">Trade Events</a>
-                    <a href="Networking.html" target="_blank">NETWORKING</a>
-                </div> -->
-
-            <li><a href="#">NEWS & EVENTS</a>
-                <div class="dropdown">
-                    <a href="Exhibitions.html" target="_blank">Exhibitions</a>
-                    <a href="Conferences.html" target="_blank">Conferences</a>
-                    <a href="Webinar.html" target="_blank">Webinars</a>
-                    <a href="EventCalendar.html" target="_blank">Event Calendar</a>
-                    <a href="Awards.html" target="_blank">Awards</a>
-                    <a href="knowledge.html" target="_blank">Knowledge</a>
-            </div>
-            </li>
-            <li><a href="#">Media</a>
-                <div class="dropdown">
-                    <a href="Exhibitions.html" target="_blank">Photos</a>
-                    <a href="Conferences.html" target="_blank">Videos</a>
-                    <a href="Webinar.html" target="_blank">Inspiring Stories</a>
-                    <a href="EventCalendar.html" target="_blank">Blogs</a>
-            </div>
-            </li>
-            <li><a href="Transport.html" target="_blank">TRANSPORT</a></li>
-            <li><a href="Download.html">DOWNLOAD</a></li>
-<li><a [routerLink]="'/contactus'" routerLinkActive="active">Contact Us</a></li>
-
-            
-        </ul>
-    </nav>
-
-    <div class="main-container">
-        <!-- SECTION 1: SLIDER -->
-        <div class="slider-container">
-            <div class="slides" id="slides">
-                <div class="slide slide1">
-                    <img src="assets/images/main-image.jpg" class="img-fluid" />
-                     <!-- <img src="/assets/images/main-image.jpg" alt=""> -->
-                    
-                </div>
-                <div class="slide slide2">
-                    <!-- <img src="/assets/images/main-image2.jpg" class="img-fluid" /> -->
-                    
-                    <img src="/assets/images/main-image2.jpg" class="img-fluid" />
-                </div>
-                <div class="slide slide3">
-                    <img src="/assets/images/main-image3.jpg" class="img-fluid" />
-                </div>
-                <div class="slide slide4">
-                    <img src="/assets/images/main-image4.jpg" class="img-fluid" />
-                </div>
-            </div>
-
-            <div class="buttons">
-                <button class="btn" id="prev">
-                     </button>
-                        <button class="btn" id="next"> > </button>
-            </div>
-
-            <div class="dots" id="dots">
-                <span class="dot active"></span>
-                <span class="dot"></span>
-                <span class="dot"></span>
-                <span class="dot"></span>
-            </div>
-        </div>
-
-        <!-- SECTION 2 -->
-        <div class="section-two">
-
-             <!-- Sponsors/Ads - horizontal scroll -->
-            <div class="sponsors">
-                <h3>SPONSORED BY</h3>
-                <div class="sp-track">
-                    <div class="sponsor-track">
-                        <!-- <div class="sponsor">
-                            <img src="brands-logo/thumbs_bose-logo1.gif">
-                        </div>
-                        <div class="sponsor">
-                            <img src="brands-logo/thumbs_toshiba-logo.gif">
-                        </div>
-                        <div class="sponsor">
-                            <img src="brands-logo/thumbs_zenith-logo.gif">
-                        </div>
-                        <div class="sponsor">
-                            <img src="brands-logo/thumbs_sony-logo.gif">
-                        </div>
-                        <div class="sponsor">
-                            <img src="brands-logo/thumbs_sanyo-logo.gif">
-                        </div>
-                        <div class="sponsor">
-                            <img src="brands-logo/thumbs_hitachi-logo1.gif">
-                        </div>
-                        <div class="sponsor">
-                            <img src="brands-logo/thumbs_lg-logo1.gif">
-                        </div>
-                        <div class="sponsor">
-                            <img src="brands-logo/thumbs_panasonic-logo.gif">
-                        </div> -->
-                    </div>
-                </div>
-            </div>
-
-             <!-- Upcoming Events - vertical scroll  -->
-            <h3>UPCOMING EVENT'S</h3>
-
-            <!-- <div class="events">
-                <div class="event-track">
-                    <div class="event">
-                        <img src="brands-logo/pngg-removebg-preview.png">
-                        <div class="event-text">
-                            <h4>Annual Meetup</h4>
-                            <p>Published: June 5, 2025</p>
-                        </div>
-                    </div>
-                    <div class="event">
-                        <img src="brands-logo/pngg-removebg-preview.png">
-                        <div class="event-text">
-                            <h4>Tech Innovation Fair</h4>
-                            <p>Published: June 3, 2025</p>
-                        </div>
-                    </div>
-                    <div class="event">
-                        <img src="brands-logo/pngg-removebg-preview.png">
-                        <div class="event-text">
-                            <h4>Member Award Ceremony</h4>
-                            <p>Published: May 30, 2025</p>
-                        </div>
-                    </div>
-                    <div class="event">
-                        <img src="brands-logo/pngg-removebg-preview.png">
-                        <div class="event-text">
-                            <h4>Green Energy Drive</h4>
-                            <p>Published: May 25, 2025</p>
-                        </div>
-                    </div>
-                    Repeat again for infinite feel
-                    <div class="event">
-                        <img src="brands-logo/pngg-removebg-preview.png">
-                        <div class="event-text">
-                            <h4>Annual Meetup</h4>
-                            <p>Published: June 5, 2025</p>
-                        </div>
-                    </div>
-                    <div class="event">
-                        <img src="brands-logo/pngg-removebg-preview.png">
-                        <div class="event-text">
-                            <h4>Tech Innovation Fair</h4>
-                            <p>Published: June 4, 2025</p>
-                        </div>
-                    </div>
-
-                    <div class="event">
-                        <img src="brands-logo/pngg-removebg-preview.png">
-                        <div class="event-text">
-                            <h4>Tech Innovation Fair</h4>
-                            <p>Published: June 3, 2025</p>
-                        </div>
-                    </div>
-
-
-                    <div class="event">
-                        <img src="brands-logo/pngg-removebg-preview.png">
-                        <div class="event-text">
-                            <h4>Tech Innovation Fair</h4>
-                            <p>Published: June 2, 2025</p>
-                        </div>
-                    </div>
-                </div>
-            </div> -->
-
-        </div>
-
+</div>
+<!-- <section class="creative-ads" style="margin-top: -36px;">
+    <h3 style="text-align: left; font-size: 1.5rem; font-weight: bold; margin-left: 16px;">SPONSORED BY</h3>
+    <div style="width: 100%; display: flex; justify-content: center; align-items: center;">
+        <img src="assets/images/sponsoredby.jpg" alt="Polycab Sponsored Banner"
+            style="width: 95%; max-width: 1800px; border-radius: 12px; box-shadow: 0 4px 24px rgba(104,110,226,0.07);">
     </div>
+</section> -->
 
-    <section class="founder-section">
-        <div class="founder-image">
-            <img src="assets/images/main-image.jpg" alt="Founder Image" />
-        </div>
-
-        <div class="founder-text">
-            <h2>Founders <span>Message</span></h2>
-            <p>
-                To be the leading voice and catalyst for innovation, safety, and excellence in the electrical industry —
-                empowering professionals, advancing standards, and driving sustainable energy solutions for a brighter,
-                connected future.
-                <br><br>    
-                Mission To support and represent electrical professionals by promoting industry excellence, advancing safety
-                standards,
-                providing high-quality education and training, fostering innovation, and advocating for policies that strengthen
-                the electrical trade and its workforce.
-                To provide business development platforms for enabling collaborations and B2B engagement for business expansion
-                and new opportunities.
-            </p>
-            <div class="founder-name">
-                <h3>Poona Electric & Electronics Association</h3>
-                <span>Chairman & Managing Director</span>
-            </div>
-        </div>
-    </section>
-    <!-- Creative Ads Section -->
-<section class="creative-ads">
-  <h3 style="text-align: center;">Sponsored By</h3>
-  <div class="creative-ads-row">
-    <div class="creative-ad-card">
-      <img src="assets/brands-logo/images/ad1.jpg" alt="Ad 1">
-      <div class="ad-content">
-        <h4>Everest Electricals</h4>
-        <p>Quality cables and accessories for all your needs.</p>
-        <a href="#" class="ad-btn">Visit Site</a>
-      </div>
-    </div>
-    <div class="creative-ad-card">
-      <img src="assets/brands-logo/images/ad2.jpg" alt="Ad 2">
-      <div class="ad-content">
-        <h4>Unique Switchgears</h4>
-        <p>Reliable switchgear solutions for modern businesses.</p>
-        <a href="#" class="ad-btn">Learn More</a>
-      </div>
-    </div>
-    <div class="creative-ad-card">
-      <img src="assets/brands-logo/images/ad3.jpg" alt="Ad 3">
-      <div class="ad-content">
-        <h4>Fastway Couriers</h4>
-        <p>Fast and secure courier services across India.</p>
-        <a href="#" class="ad-btn">Track Now</a>
-      </div>
-    </div>
-  </div>
-</section>
-
-    <section class="about-container">
+<section class="founder-section">
+    <div class="founder-text">
         <h2>About <span>Poona</span> Electric & Electronics Association</h2>
-        <div class="about-box">
-            <!-- Left Section -->
-            <div class="about-left">
-                <p>
-                    PEEA is the Pune level body of Traders in electrical, industrial electronics, Licensed electrical contractors and
-                    associates like electrical manufacturers, engineers, consultants and similar service providers in India and was
-                    founded in . PEEA has become a pioneer association of the Electrical sector having more than 900 active members.
-                </p>
-                <p>
-                    PEEA members represent a combined annual turnover in excess of USD 70 billion. India’s exports of electrical
-                    equipment are around USD 12 billion.
-                </p>
-                <p>
-                <strong>Core Beliefs of an Electrical Trade Association:</strong>
-                </p>
-                <button onclick="window.location.href='about.html'">Read More</button>
-            </div>
-        </div>
-    </section>
+        <p>
+            PEEA is the Pune level body of Traders in electrical, industrial electronics, Licensed electrical
+            contractors and
+            associates like electrical manufacturers, engineers, consultants and similar service providers in India and
+            was founded
+            in . PEEA has become a pioneer association of the Electrical sector having more than 900 active members.
 
-    <div class="stats-section">
-        <!-- Box 1 -->
-        <div class="box">
-            <h2>Website Established</h2>
-            <div class="number" id="yearCounter">0</div>
-        </div>
-
-        <!-- Box 2 -->
-        <div class="box">
-            <h2>Members Associated</h2>
-            <div class="number" id="memberCounter">0</div>
-        </div>
-
-        <!-- Box 3 -->
-        <div class="box">
-            <h2>Upcoming Events</h2>
-            <ul class="events-list">
-                <li>Annual Meet 2025</li>
-                <li>Policy Review Session</li>
-                <li>Tech Exhibition 2025</li>
-            </ul>
-            <a href="#" class="read-more">Read More</a>
-        </div>
+            PEEA members represent a combined annual turnover in excess of USD 70 billion. India’s exports of electrical
+            equipment
+            are around USD 12 billion.
+            Core Beliefs of an Electrical Trade Association:
+            <br>
+            Vision
+            <br>
+            To be the leading voice and catalyst for innovation, safety, and excellence in the electrical industry —
+            empowering
+            professionals, advancing standards, and driving sustainable energy solutions for a brighter, connected
+            future."
+            <br>
+            Mission
+            <br>
+            To support and represent electrical professionals by promoting industry excellence, advancing safety
+            standards, providing high-quality education and training, fostering innovation, and advocating for policies
+            that strengthen the electrical trade and its workforce."
+            To provide business development platforms for enabling collaborations and B2B engagement for business
+            expansion and new opportunities.
+        </p>
     </div>
-
-    <!-- Join Section -->
-    <section class="join-section">
-        <div class="join-boxes">
-            <!-- Box 1: Join Association -->
-            <div class="join-box">
-                <h2>Become an Associate</h2>
-                <p>Join the Poona Electric & Electronics Association (PEEA) to connect, collaborate, and grow with industry leaders and
-                    innovators.</p>
-                <a href="#" class="know-more-btn">Know More</a>
-            </div>
-
-            <!-- Box 2: Support Association -->
-            <div class="join-box">
-                <h2>Support the Association</h2>
-                <p>Show your support by contributing your skills, resources, or sponsorship to help us thrive and lead.
-                </p>
-                <a href="#" class="know-more-btn">Know More</a>
-            </div>
-        </div>
-    </section>
-    <!-- Add this after your join-section -->
-<section class="sponsored-ads">
-  <h3 style="text-align: center;">Sponsored By</h3>
-  <div class="ads-row">
-    <div class="ad-card">
-      <img src="assets/brands-logo/images/ad1.jpg" alt="Ad 1">
+    <div class="founder-image">
+        <img src="assets/images/main-image.jpg" alt="Founder Image" />
     </div>
-    <div class="ad-card">
-      <img src="assets/brands-logo/images/ad2.jpg" alt="Ad 2">
-    </div>
-    <div class="ad-card">
-      <img src="assets/brands-logo/images/ad3.jpg" alt="Ad 3">
-    </div>
-    <div class="ad-card">
-      <img src="assets/brands-logo/images/ad4.jpg" alt="Ad 3">
-    </div>
-    <div class="ad-card">
-      <img src="assets/brands-logo/images/ad5.jpg" alt="Ad 3">
-    </div>
-    <div class="ad-card">
-      <img src="assets/brands-logo/images/ad6.jpg" alt="Ad 3">
-    </div>
+</section>
+<section class="ads-grid-section">
+    <h3 class="ads-grid-title">Ads</h3>
+    <div class="ads-grid">
+        <div class="ad-box"
+        *ngFor="let ad of adsBySlot; index as i">
+        
+     <ng-container *ngIf="ad; else emptyAd">
+       <img [src]="getImageUrl(ad.imageUrl)"
+            [alt]="'ad' + (i+1)"
+            class="zoomable-img"
+            (click)="openZoom(ad.imageUrl)" />
+     </ng-container>
    
-    <!-- Add more ad-card divs as needed -->
+     <ng-template #emptyAd>
+       <img src="" [alt]="'ad' + (i+1)" />
+     </ng-template>
+   </div>
+        </div>
+</section>
+<div class="zoom-modal" *ngIf="zoomedImageUrl" (click)="closeZoom()">
+    <img [src]="getImageUrl(zoomedImageUrl)" alt="Zoomed Image" class="zoomed-image" />
   </div>
+<section class="sponsor-logos-section">
+    <div class="sponsor-logos-container">
+        <div class="sponsor-logos-track">
+            <!-- First set of logos -->
+            <div class="sponsor-logo"><img src="assets/images/ad/ads1.jpeg" alt="Sponsor 1"></div>
+            <div class="sponsor-logo"><img src="assets/images/ad/ads2.jpeg" alt="Sponsor 2"></div>
+            <div class="sponsor-logo"><img src="assets/images/ad/ads3.jpeg" alt="Sponsor 3"></div>
+            <div class="sponsor-logo"><img src="assets/images/ad/ads4.jpeg" alt="Sponsor 4"></div>
+            <div class="sponsor-logo"><img src="assets/images/ad/ads5.jpeg" alt="Sponsor 5"></div>
+            <div class="sponsor-logo"><img src="assets/images/ad/ads6.jpeg" alt="Sponsor 6"></div>
+            <div class="sponsor-logo"><img src="assets/images/ad/ads7.jpeg" alt="Sponsor 7"></div>
+            <div class="sponsor-logo"><img src="assets/images/ad/ads8.jpeg" alt="Sponsor 8"></div>
+            <div class="sponsor-logo"><img src="assets/images/ad/ads9.jpeg" alt="Sponsor 9"></div>
+            <div class="sponsor-logo"><img src="assets/images/ad/ads10.jpeg" alt="Sponsor 10"></div>
+            <div class="sponsor-logo"><img src="assets/images/ad/ads11.jpeg" alt="Sponsor 11"></div>
+            <div class="sponsor-logo"><img src="assets/images/ad/ads12.jpeg" alt="Sponsor 12"></div>
+            <div class="sponsor-logo"><img src="assets/images/ad/ads13.jpeg" alt="Sponsor 13"></div>
+            <div class="sponsor-logo"><img src="assets/images/ad/ads14.jpeg" alt="Sponsor 14"></div>
+            <div class="sponsor-logo"><img src="assets/images/ad/ads15.jpeg" alt="Sponsor 15"></div>
+            <div class="sponsor-logo"><img src="assets/images/ad/ads16.jpeg" alt="Sponsor 16"></div>
+            <div class="sponsor-logo"><img src="assets/images/ad/ads17.jpeg" alt="Sponsor 17"></div>
+            <div class="sponsor-logo"><img src="assets/images/ad/ads18.jpeg" alt="Sponsor 18"></div>
+            <div class="sponsor-logo"><img src="assets/images/ad/ads19.jpeg" alt="Sponsor 19"></div>
+            <div class="sponsor-logo"><img src="assets/images/ad/ads20.jpeg" alt="Sponsor 20"></div>
+            <div class="sponsor-logo"><img src="assets/images/ad/ads21.jpeg" alt="Sponsor 21"></div>
+            <div class="sponsor-logo"><img src="assets/images/ad/ads22.jpeg" alt="Sponsor 22"></div>
+            <div class="sponsor-logo"><img src="assets/images/ad/ads23.jpeg" alt="Sponsor 23"></div>
+            <div class="sponsor-logo"><img src="assets/images/ad/ads24.jpeg" alt="Sponsor 24"></div>
+            <div class="sponsor-logo"><img src="assets/images/ad/ads25.jpeg" alt="Sponsor 25"></div>
+            <div class="sponsor-logo"><img src="assets/images/ad/ads26.jpeg" alt="Sponsor 26"></div>
+            <div class="sponsor-logo"><img src="assets/images/ad/ads27.jpeg" alt="Sponsor 27"></div>
+            <div class="sponsor-logo"><img src="assets/images/ad/ads28.jpeg" alt="Sponsor 28"></div>
+            <div class="sponsor-logo"><img src="assets/images/ad/ads29.jpeg" alt="Sponsor 29"></div>
+            <div class="sponsor-logo"><img src="assets/images/ad/ads30.jpeg" alt="Sponsor 30"></div>
+            <div class="sponsor-logo"><img src="assets/images/ad/ads31.jpeg" alt="Sponsor 31"></div>
+            <div class="sponsor-logo"><img src="assets/images/ad/ads32.jpeg" alt="Sponsor 32"></div>
+            <div class="sponsor-logo"><img src="assets/images/ad/ads33.jpeg" alt="Sponsor 33"></div>
+            <div class="sponsor-logo"><img src="assets/images/ad/ads34.jpeg" alt="Sponsor 34"></div>
+            <div class="sponsor-logo"><img src="assets/images/ad/ads35.jpeg" alt="Sponsor 35"></div>
+            <div class="sponsor-logo"><img src="assets/images/ad/ads36.jpeg" alt="Sponsor 36"></div>
+            <div class="sponsor-logo"><img src="assets/images/ad/ads37.jpeg" alt="Sponsor 37"></div>
+            <div class="sponsor-logo"><img src="assets/images/ad/ads38.jpeg" alt="Sponsor 38"></div>
+            <div class="sponsor-logo"><img src="assets/images/ad/ads39.jpeg" alt="Sponsor 39"></div>
+            <div class="sponsor-logo"><img src="assets/images/ad/ads40.jpeg" alt="Sponsor 40"></div>
+            <div class="sponsor-logo"><img src="assets/images/ad/ads41.jpeg" alt="Sponsor 41"></div>
+            <div class="sponsor-logo"><img src="assets/images/ad/ads42.jpeg" alt="Sponsor 42"></div>
+            <div class="sponsor-logo"><img src="assets/images/ad/ads43.jpeg" alt="Sponsor 43"></div>
+            <div class="sponsor-logo"><img src="assets/images/ad/ads44.jpeg" alt="Sponsor 44"></div>
+            <div class="sponsor-logo"><img src="assets/images/ad/ads45.jpeg" alt="Sponsor 45"></div>
+            <div class="sponsor-logo"><img src="assets/images/ad/ads46.jpeg" alt="Sponsor 46"></div>
+            <div class="sponsor-logo"><img src="assets/images/ad/ads47.jpeg" alt="Sponsor 47"></div>
+            <div class="sponsor-logo"><img src="assets/images/ad/ads48.jpeg" alt="Sponsor 48"></div>
+            <div class="sponsor-logo"><img src="assets/images/ad/ads49.jpeg" alt="Sponsor 49"></div>
+            <div class="sponsor-logo"><img src="assets/images/ad/ads50.jpeg" alt="Sponsor 50"></div>
+            <div class="sponsor-logo"><img src="assets/images/ad/ads51.jpeg" alt="Sponsor 51"></div>
+            <div class="sponsor-logo"><img src="assets/images/ad/ads52.jpeg" alt="Sponsor 52"></div>
+            <div class="sponsor-logo"><img src="assets/images/ad/ads53.jpeg" alt="Sponsor 53"></div>
+            <div class="sponsor-logo"><img src="assets/images/ad/ads54.jpeg" alt="Sponsor 54"></div>
+            <div class="sponsor-logo"><img src="assets/images/ad/ads55.jpeg" alt="Sponsor 55"></div>
+            <div class="sponsor-logo"><img src="assets/images/ad/ads56.jpeg" alt="Sponsor 56"></div>
+            <div class="sponsor-logo"><img src="assets/images/ad/ads57.jpeg" alt="Sponsor 57"></div>
+            <div class="sponsor-logo"><img src="assets/images/ad/ads58.jpeg" alt="Sponsor 58"></div>
+            <div class="sponsor-logo"><img src="assets/images/ad/ads59.jpeg" alt="Sponsor 59"></div>
+            <div class="sponsor-logo"><img src="assets/images/ad/ads60.jpeg" alt="Sponsor 60"></div>
+            <div class="sponsor-logo"><img src="assets/images/ad/ads61.jpeg" alt="Sponsor 61"></div>
+            <div class="sponsor-logo"><img src="assets/images/ad/ads62.jpeg" alt="Sponsor 62"></div>
+            <div class="sponsor-logo"><img src="assets/images/ad/ads63.jpeg" alt="Sponsor 63"></div>
+            <div class="sponsor-logo"><img src="assets/images/ad/ads64.jpeg" alt="Sponsor 64"></div>
+            <div class="sponsor-logo"><img src="assets/images/ad/ads65.jpeg" alt="Sponsor 65"></div>
+            <div class="sponsor-logo"><img src="assets/images/ad/ads66.jpeg" alt="Sponsor 66"></div>
+            <div class="sponsor-logo"><img src="assets/images/ad/ads67.jpeg" alt="Sponsor 67"></div>
+            <div class="sponsor-logo"><img src="assets/images/ad/ads68.jpeg" alt="Sponsor 68"></div>
+            <div class="sponsor-logo"><img src="assets/images/ad/ads69.jpeg" alt="Sponsor 69"></div>
+            <div class="sponsor-logo"><img src="assets/images/ad/ads70.jpeg" alt="Sponsor 70"></div>
+            <div class="sponsor-logo"><img src="assets/images/ad/ads71.jpeg" alt="Sponsor 71"></div>
+            <div class="sponsor-logo"><img src="assets/images/ad/ads72.jpeg" alt="Sponsor 71"></div>
+            <div class="sponsor-logo"><img src="assets/images/ad/ads73.jpeg" alt="Sponsor 72"></div>
+            <div class="sponsor-logo"><img src="assets/images/ad/ads74.jpeg" alt="Sponsor 73"></div>
+            <div class="sponsor-logo"><img src="assets/images/ad/ads75.jpeg" alt="Sponsor 74"></div>
+            <div class="sponsor-logo"><img src="assets/images/ad/ads76.jpeg" alt="Sponsor 75"></div>
+            <div class="sponsor-logo"><img src="assets/images/ad/ads77.jpeg" alt="Sponsor 76"></div>
+            <div class="sponsor-logo"><img src="assets/images/ad/ads78.jpeg" alt="Sponsor 77"></div>
+            <div class="sponsor-logo"><img src="assets/images/ad/ads79.jpeg" alt="Sponsor 78"></div>
+            <div class="sponsor-logo"><img src="assets/images/ad/ads80.jpeg" alt="Sponsor 79"></div>
+            <div class="sponsor-logo"><img src="assets/images/ad/ads81.jpeg" alt="Sponsor 80"></div>
+            <div class="sponsor-logo"><img src="assets/images/ad/ads82.jpeg" alt="Sponsor 90"></div>
+            <div class="sponsor-logo"><img src="assets/images/ad/ads83.jpeg" alt="Sponsor 81"></div>
+            <div class="sponsor-logo"><img src="assets/images/ad/ads84.jpeg" alt="Sponsor 82"></div>
+            <div class="sponsor-logo"><img src="assets/images/ad/ads85.jpeg" alt="Sponsor 83"></div>
+            <div class="sponsor-logo"><img src="assets/images/ad/ads86.jpeg" alt="Sponsor 84"></div>
+            <div class="sponsor-logo"><img src="assets/images/ad/ads87.jpeg" alt="Sponsor 85"></div>
+            <div class="sponsor-logo"><img src="assets/images/ad/ads88.jpeg" alt="Sponsor 86"></div>
+            <div class="sponsor-logo"><img src="assets/images/ad/ads89.jpeg" alt="Sponsor 87"></div>
+            <div class="sponsor-logo"><img src="assets/images/ad/ads90.jpeg" alt="Sponsor 88"></div>
+            <div class="sponsor-logo"><img src="assets/images/ad/ads91.jpeg" alt="Sponsor 91"></div>
+            <div class="sponsor-logo"><img src="assets/images/ad/ads92.jpeg" alt="Sponsor 92"></div>
+            <div class="sponsor-logo"><img src="assets/images/ad/ads93.jpeg" alt="Sponsor 93"></div>
+            <div class="sponsor-logo"><img src="assets/images/ad/ads94.jpeg" alt="Sponsor 94"></div>
+            <div class="sponsor-logo"><img src="assets/images/ad/ads95.jpeg" alt="Sponsor 95"></div>
+            <div class="sponsor-logo"><img src="assets/images/ad/ads96.jpeg" alt="Sponsor 96"></div>
+            <div class="sponsor-logo"><img src="assets/images/ad/ads131.jpeg" alt="Sponsor 98"></div>
+            <div class="sponsor-logo"><img src="assets/images/ad/ads41.jpeg" alt="Sponsor 41"></div>
+            <div class="sponsor-logo"><img src="assets/images/ad/ads42.jpeg" alt="Sponsor 42"></div>
+            <div class="sponsor-logo"><img src="assets/images/ad/ads43.jpeg" alt="Sponsor 43"></div>
+            <div class="sponsor-logo"><img src="assets/images/ad/ads101.jpeg" alt="Sponsor 101"></div>
+            <div class="sponsor-logo"><img src="assets/images/ad/ads102.jpeg" alt="Sponsor 102"></div>
+            <div class="sponsor-logo"><img src="assets/images/ad/ads103.jpeg" alt="Sponsor 103"></div>
+            <div class="sponsor-logo"><img src="assets/images/ad/ads104.jpeg" alt="Sponsor 104"></div>
+            <div class="sponsor-logo"><img src="assets/images/ad/ads105.jpeg" alt="Sponsor 105"></div>
+            <div class="sponsor-logo"><img src="assets/images/ad/ads106.jpeg" alt="Sponsor 106"></div>
+            <div class="sponsor-logo"><img src="assets/images/ad/ads107.jpeg" alt="Sponsor 107"></div>
+            <div class="sponsor-logo"><img src="assets/images/ad/ads108.jpeg" alt="Sponsor 108"></div>
+            <div class="sponsor-logo"><img src="assets/images/ad/ads109.jpeg" alt="Sponsor 109"></div>
+            <div class="sponsor-logo"><img src="assets/images/ad/ads110.jpeg" alt="Sponsor 110"></div>
+            <div class="sponsor-logo"><img src="assets/images/ad/ads111.jpeg" alt="Sponsor 111"></div>
+            <div class="sponsor-logo"><img src="assets/images/ad/ads112.jpeg" alt="Sponsor 112"></div>
+            <div class="sponsor-logo"><img src="assets/images/ad/ads113.jpeg" alt="Sponsor 113"></div>
+            <div class="sponsor-logo"><img src="assets/images/ad/ads114.jpeg" alt="Sponsor 114"></div>
+            <div class="sponsor-logo"><img src="assets/images/ad/ads115.jpeg" alt="Sponsor 115"></div>
+            <div class="sponsor-logo"><img src="assets/images/ad/ads116.jpeg" alt="Sponsor 116"></div>
+            <div class="sponsor-logo"><img src="assets/images/ad/ads117.jpeg" alt="Sponsor 117"></div>
+            <div class="sponsor-logo"><img src="assets/images/ad/ads118.jpeg" alt="Sponsor 118"></div>
+            <div class="sponsor-logo"><img src="assets/images/ad/ads119.jpeg" alt="Sponsor 119"></div>
+            <div class="sponsor-logo"><img src="assets/images/ad/ads120.jpeg" alt="Sponsor 120"></div>
+            <div class="sponsor-logo"><img src="assets/images/ad/ads129.jpeg" alt="Sponsor 129"></div>
+            <div class="sponsor-logo"><img src="assets/images/ad/ads130.jpeg" alt="Sponsor 130"></div>
+            <!-- Duplicate initial set of logos for seamless looping -->
+            <div class="sponsor-logo"><img src="assets/images/ad/ads1.jpeg" alt="Sponsor 1"></div>
+            <div class="sponsor-logo"><img src="assets/images/ad/ads2.jpeg" alt="Sponsor 2"></div>
+            <div class="sponsor-logo"><img src="assets/images/ad/ads3.jpeg" alt="Sponsor 3"></div>
+            <div class="sponsor-logo"><img src="assets/images/ad/ads4.jpeg" alt="Sponsor 4"></div>
+            <div class="sponsor-logo"><img src="assets/images/ad/ads5.jpeg" alt="Sponsor 5"></div>
+            <div class="sponsor-logo"><img src="assets/images/ad/ads6.jpeg" alt="Sponsor 6"></div>
+            <div class="sponsor-logo"><img src="assets/images/ad/ads7.jpeg" alt="Sponsor 7"></div>
+            <div class="sponsor-logo"><img src="assets/images/ad/ads8.jpeg" alt="Sponsor 8"></div>
+            <div class="sponsor-logo"><img src="assets/images/ad/ads9.jpeg" alt="Sponsor 9"></div>
+            <div class="sponsor-logo"><img src="assets/images/ad/ads10.jpeg" alt="Sponsor 10"></div>
+            <!-- Additional duplicates to ensure smooth looping -->
+            <div class="sponsor-logo"><img src="assets/images/ad/ads11.jpeg" alt="Sponsor 11"></div>
+            <div class="sponsor-logo"><img src="assets/images/ad/ads12.jpeg" alt="Sponsor 12"></div>
+            <div class="sponsor-logo"><img src="assets/images/ad/ads13.jpeg" alt="Sponsor 13"></div>
+            <div class="sponsor-logo"><img src="assets/images/ad/ads14.jpeg" alt="Sponsor 14"></div>
+            <div class="sponsor-logo"><img src="assets/images/ad/ads15.jpeg" alt="Sponsor 15"></div>
+        </div>
+    </div>
 </section>
 
     <!-- Footer -->
@@ -398,42 +247,73 @@
         <div class="footer-container">
             <div class="footer-columns">
 
-                <div class="footer-column">
-                    <div class="about-box1">
-                        <h3 class="footer-title">ABOUT</h3>
-                    </div>
-                    <ul class="footer-links">
-                        <li><a href="about.html"><i class="fas fa-chevron-right"></i> About Us</a></li>
-                        <li><a href="about.html#aims-objectives"><i class="fas fa-chevron-right"></i>Aims & Objectives</a></li>
-                        <li><a href="websitecommittee.html"><i class="fas fa-chevron-right"></i> Website Committee</a></li>
-                        <li><a href="about.html#facilities-member-services"><i class="fas fa-chevron-right"></i> Facility To Members</a></li>
-                    </ul>
-                </div>
-
                 <!-- Membership Column -->
                 <div class="footer-column">
                     <h3 class="footer-title">MEMBERSHIP</h3>
                     <ul class="footer-links">
-                        <li><a href="#"><i class="fas fa-chevron-right"></i> Member Login</a></li>
-                        <li><a href="#"><i class="fas fa-chevron-right"></i> Member Directory</a></li>
-                        <li><a href="#"><i class="fas fa-chevron-right"></i> How To Become A Member</a></li>
-                        <li><a href="#"><i class="fas fa-chevron-right"></i> Membership Benefits</a></li>
+                        <li><a routerLink="/becomemember"><i class="fas fa-chevron-right"></i> Become a Member</a>
+                        </li>
                     </ul>
+                    <div class="advertise-link">
+                        <a href="#">
+                            <img src="assets/images/ad/advertisement_us.png" alt="Advertise with us" class="app-store-img">
+                        </a>
+                    </div>
                 </div>
-
+                <!-- Advertise Column -->
+                <div class="footer-column">
+                    <h3 class="footer-title">Advertise With Us</h3>
+                    <div class="app-download-buttons">
+                        <a href="https://play.google.com/store/apps/details/"
+                            class="app-download-link" target="_blank">
+                            <img src="assets/images/GooglePlayStore.png" alt="Get it on Google Play"
+                            class="app-store-img">
+                        </a>
+                        <a href="https://apps.apple.com/in/app/" class="app-download-link" target="_blank">
+                            <img src="assets/images/appstore.png" alt="Download on the App Store" class="app-store-img">
+                            
+                        </a>
+                    </div>
+                    <div class="advertise-link">
+                        <a href="#">
+                            <img src="assets/images/ad/advertise_with_us.png" alt="Advertise with us" class="app-store-img">
+                        </a>
+                    </div>
+                    
+                </div>
                 <!-- Contact Column -->
                 <div class="footer-column">
                     <h3 class="footer-title">CONTACT</h3>
-                    <ul class="footer-links">
-                        <li><a href="contact.html"><i class="fas fa-chevron-right"></i> Contact Us</a></li>
-                        <li><a href="#"><i class="fas fa-chevron-right"></i> Useful Links</a></li>
-                        <li><a href="#"><i class="fas fa-chevron-right"></i> Feedback</a></li>
+                    <!-- <ul class="footer-links">
+                        <li><a routerLink="/contactus"><i class="fas fa-chevron-right"></i> Contact Us</a></li>
+                        <li><a routerLink="/download"><i class="fas fa-chevron-right"></i> Useful Links</a></li>
+                        <li><a routerLink="/contactus"><i class="fas fa-chevron-right"></i> Feedback</a></li>
                         <li><a href="#"><i class="fas fa-chevron-right"></i> Social Connect</a></li>
-                    </ul>
+                    </ul> -->
                     <div class="social-icons">
-                        <a href="#" class="social-icon facebook"><i class="fab fa-facebook-f"></i></a>
-                        <a href="#" class="social-icon twitter"><i class="fab fa-twitter"></i></a>
+                        <a href="https://www.facebook.com/peeapune" class="social-icon facebook" title="Facebook"
+                            target="_blank"><i class="fab fa-facebook-f"></i></a>
+                        <a href="www.linkedin.com/in/poona-electricals-association-534882352"
+                            class="social-icon linkedin" title="LinkedIn" target="_blank"><i
+                                class="fab fa-linkedin-in"></i></a>
+                        <a href="https://x.com/peeapune?t=Ck14KlQSvWgZlRLclIJZww&s=08" class="social-icon twitter"
+                            title="Twitter/X" target="_blank"><i class="fab fa-x-twitter"></i></a>
+                        <a href="https://www.instagram.com/peea.01/" class="social-icon instagram" title="Instagram"
+                            target="_blank"><i class="fab fa-instagram"></i></a>
+                        <a href="https://www.youtube.com/channel/UCUMVxorfCfCArDf2BIyNFHw" class="social-icon youtube"
+                            title="YouTube" target="_blank"><i class="fab fa-youtube"></i></a>
                     </div>
+                </div>
+                <div class="footer-column">
+                    <h3 class="footer-title">Policy </h3>
+                    <ul class="footer-links">
+                        <li><a routerLink="/sitemap"><i class="fas fa-chevron-right"></i> Site Map</a></li>
+                        <li><a routerLink="/privacy-policy"><i class="fas fa-chevron-right"></i> Privacy Policy</a></li>
+                        <li><a routerLink="/refund-policy"><i class="fas fa-chevron-right"></i> Refund Policy</a></li>
+                        <li><a routerLink="/disclaimer"><i class="fas fa-chevron-right"></i> Disclaimer</a></li>
+                        <li><a routerLink="/terms-condition"><i class="fas fa-chevron-right"></i> Terms &amp;
+                                Conditions</a></li>
+                    </ul>
                 </div>
 
                 <!-- Get In Touch Column -->
@@ -442,17 +322,24 @@
                     <div class="contact-info">
                         <div class="contact-item">
                             <i class="fas fa-building"></i>
-                            <span>Poona Electric And Electronics Association
-                                627B, Bedekar Sadan, 3rd floor, Opp.Faraskhana Police Station, Nr.Dagduseth Ganpati
-                                Mandir, Budhwar Peth, Pune - 411002.</span>
+                            <div class="address-container">
+                                <div>Poona Electric And Electronics Association</div>
+                                <div>627B, Bedekar Sadan,</div>
+                                <div>3rd floor,Opp.Faraskhana Police Station</div>
+                                <div>Nr.Dagduseth Ganpati Mandir,</div>
+                                <div>Budhwar Peth, Pune - 411002.</div>
+                            </div>
                         </div>
                         <div class="contact-item">
                             <i class="fas fa-envelope"></i>
-                            <span>poonaelectricalassociation&#64;gmail.com</span>
+                            <div class="email-container">
+                                <div>poonaelectricalsassociation&#64;gmail.com</div>
+                                <div>peeapune1&#64;gmail.com</div>
+                            </div>
                         </div>
                         <div class="contact-item">
                             <i class="fas fa-phone"></i>
-                            <span>Phone Number - 7972579597</span>
+                            <span>Phone Number - 7972579597, 02029991555</span>
                             <div class="logo-final">
                                 <img src="assets/brands-logo/PEEA_LOGO_2-removebg-preview.png" width="60px">
                             </div>
@@ -461,19 +348,16 @@
                 </div>
             </div>
         </div>
-
+        
         <!-- Footer Bottom -->
         <div class="footer-bottom">
             <div class="footer-container">
-                <p>© 2025 All Right Reserved by Poona Electric & Electronics Association
+                <p>
+                    © 2025 All Right Reserved by Poona Electric & Electronics Association | Powered by
+                    <a href="https://dodigitalnow.com" target="_blank" rel="noopener">
+                        <img src="assets/images/dodigitalnow.png" alt="DoDigitalNow" class="company-logo">
+                    </a>
                 </p>
             </div>
         </div>
     </footer>
-</body>
-
-
-
-
-
-    

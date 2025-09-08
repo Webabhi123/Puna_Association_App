@@ -1,68 +1,71 @@
-const slides = document.getElementById('slides');
-const dots = document.querySelectorAll('.dot');
-const totalSlides = dots.length;
+document.addEventListener('DOMContentLoaded', function () {
 
-let currentIndex = 0;
-let slideInterval = setInterval(nextSlide, 4000);
+  
+  const slides = document.getElementById('slides');
+  const dots = document.querySelectorAll('.dot');
+  const totalSlides = dots.length;
 
-function updateSlider(index) {
+  window.onclick = function (event) {
+    const imgModal = document.getElementById('imgModal');
+    if (event.target === imgModal) {
+      imgModal.style.display = "none";
+    }
+  };
+
+  // Slider logic
+  let currentIndex = 0;
+  let slideInterval = setInterval(nextSlide, 4000);
+
+  function updateSlider(index) {
+    if (!slides) return;
     slides.style.transform = `translateX(-${index * 100}%)`;
     dots.forEach(dot => dot.classList.remove('active'));
     dots[index].classList.add('active');
-}
+  }
 
-function nextSlide() {
+  function nextSlide() {
     currentIndex = (currentIndex + 1) % totalSlides;
     updateSlider(currentIndex);
-}
+  }
 
-function prevSlide() {
+  function prevSlide() {
     currentIndex = (currentIndex - 1 + totalSlides) % totalSlides;
     updateSlider(currentIndex);
-}
+  }
 
-document.getElementById('next').addEventListener('click', () => {
-    nextSlide();
-    resetInterval();
-});
+  const nextBtn = document.getElementById('next');
+  const prevBtn = document.getElementById('prev');
 
-document.getElementById('prev').addEventListener('click', () => {
-    prevSlide();
-    resetInterval();
-});
-
-dots.forEach((dot, index) => {
-    dot.addEventListener('click', () => {
-        currentIndex = index;
-        updateSlider(currentIndex);
-        resetInterval();
+  if (nextBtn) {
+    nextBtn.addEventListener('click', () => {
+      nextSlide();
+      resetInterval();
     });
-});
+  }
 
-function resetInterval() {
+  if (prevBtn) {
+    prevBtn.addEventListener('click', () => {
+      prevSlide();
+      resetInterval();
+    });
+  }
+
+  dots.forEach((dot, index) => {
+    dot.addEventListener('click', () => {
+      currentIndex = index;
+      updateSlider(currentIndex);
+      resetInterval();
+    });
+  });
+
+  function resetInterval() {
     clearInterval(slideInterval);
     slideInterval = setInterval(nextSlide, 4000);
-}
-
-function toggleNavbar() {
+  }
+  
+  // Navbar toggle
+  window.toggleNavbar = function () {
     const menu = document.getElementById("navbarMenu");
-    menu.classList.toggle("show");
-}
-
-function animateCounter(id, endValue, duration) {
-    const element = document.getElementById(id);
-    let startValue = 0;
-    const increment = Math.ceil(endValue / (duration / 50));
-
-    const counter = setInterval(() => {
-        startValue += increment;
-        if (startValue >= endValue) {
-            startValue = endValue;
-            clearInterval(counter);
-        }
-        element.textContent = startValue;
-    }, 50);
-}
-// Example values (can be changed)
-animateCounter("yearCounter", 2025, 5000);   // Website established in 2004
-animateCounter("memberCounter", 900, 5000); // 3250 members
+    menu?.classList.toggle("show");
+  };
+});

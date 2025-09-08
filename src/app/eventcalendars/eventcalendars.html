@@ -1,0 +1,12 @@
+<div class="notice-board" *ngIf="upcomingEvents.length > 0">
+    <h3> Upcoming Events (Next 7 Days)</h3>
+    <div class="scroll-container">
+    <ul>
+      <li *ngFor="let event of upcomingEvents">
+        <strong>{{ event.title }}</strong> - {{ event.date | date:'fullDate' }}
+      </li>
+    </ul>
+    </div>
+  </div>
+  <!-- Calendar -->
+  <div id='calendar'></div>

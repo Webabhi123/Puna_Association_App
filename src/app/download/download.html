@@ -1,0 +1,136 @@
+<div class="center-container">
+  <section class="accordion">
+    <!-- <div class="tab">
+      <input type="checkbox" id="pricelist">
+      <label for="pricelist" class="tab__label">Pricelist</label>
+      <div class="tab__content">
+        <p>Latest product and service pricelists will be available here.</p>
+      </div>
+    </div> -->
+    <div class="tab">
+      <input type="checkbox" id="training">
+      <label for="training" class="tab__label">Training courses</label>
+      <div class="tab__content">
+        <p>Find details about upcoming and ongoing training courses.</p>
+      </div>
+    </div>
+    <div class="tab">
+      <input type="checkbox" id="Knowledge">
+      <label for="Knowledge" class="tab__label">Technical (Knowledge)</label>
+      <div class="tab__content">
+        <p> <a href="assets/Cables-Luminaire.pdf" target="_blank">Cables & Luminaire</a></p>
+        <p> <a href="assets/Earthing.pdf" target="_blank">Earthing</a></p>
+        <p><a href="assets/PVC-Conduit.pdf" target="_blank">PVC Conduit</a></p>
+        <p><a href="assets/Safety-Rules.pdf" target="_blank">Safety Rules</a></p>
+        <p><a href="assets/Sheets-Plates-Cables.pdf" target="_blank">Sheets, Plates & Cables</a></p>
+        <p><a href="assets/Standard-Steel-cored-Aluminium-Comductors.pdf" target="_blank">Standard Steel-cored Aluminium Comductors</a></p>
+        <p><a href="assets/Stardelta-Selection.pdf" target="_blank">Stardelta Selection</a></p>
+      </div>
+    </div>
+    <div class="tab">
+  <input type="checkbox" id="jobsearch">
+  <label for="jobsearch" class="tab__label">Job Search</label>
+  <div class="tab__content">
+    <h3 style="text-align:center; color:#3b5fbf; margin-top:0;">Careers in Electrical Shops</h3><br>
+    <form #jobFormRef="ngForm" (ngSubmit)="onSubmit(jobFormRef)" class="career-form">
+      <div class="input-icon">
+        <i class="fa fa-user"></i>
+        <input type="text" name="name" [(ngModel)]="jobForm.name" #name="ngModel" placeholder="Name" required>
+      </div>
+      <div class="input-icon">
+        <i class="fa fa-phone"></i>
+        <input type="tel" name="phone" [(ngModel)]="jobForm.phone" #phone="ngModel" placeholder="Phone" required>
+      </div>
+      <div class="input-icon">
+        <i class="fa fa-envelope"></i>
+        <input type="email" name="email" [(ngModel)]="jobForm.email" #email="ngModel" placeholder="Email" required>
+      </div>
+      <div class="input-icon">
+        <i class="fa fa-briefcase"></i>
+        <select name="position" [(ngModel)]="jobForm.position" #position="ngModel" required>
+          <option value="" disabled selected>Careers in Electrical Shops</option>
+          <option>Electrical Sales Specialist / Sales Representative</option>
+          <option>Inventory / Stock Controller</option>
+          <option>Electrical Technician / Repair Specialist</option>
+          <option>Customer Service Representative</option>
+          <option>Shop Manager / Store Supervisor</option>
+          <option>Purchasing Agent / Procurement Specialist</option>
+          <option>Electrical Estimator</option>
+          <option>Technical Trainer</option>
+          <option>Accountant</option>
+        </select>
+      </div>
+      <div class="input-icon">
+        <i class="fa fa-bullseye"></i>
+        <input type="text" name="objective" [(ngModel)]="jobForm.objective" placeholder="Objective" required>
+      </div>
+      <div class="input-icon">
+        <i class="fa fa-upload"></i>
+        <input type="file" #fileInput (change)="onFileSelected($event)" accept=".pdf,.doc,.docx" required>
+        <span *ngIf="jobForm.resume">{{ jobForm.resume }}</span>
+      </div>
+      <button type="submit" class="career-submit">Submit</button>
+    </form>
+    
+  </div>
+</div>
+    <!-- <div class="tab">
+      <input type="checkbox" id="transporters">
+      <label for="transporters" class="tab__label">Transporters</label>
+      <div class="tab__content">
+        <p>Contact details and information about transporters.</p>
+      </div>
+    </div> -->
+<div class="tab">
+  <input type="checkbox" id="useful-links">
+  <label for="useful-links" class="tab__label">Useful Links</label>
+  <div class="tab__content">
+    <button class="sub-accordion">Travel <span>&#9660;</span></button>
+    <div class="sub-panel">
+      <ul>
+        <li><a href="https://www.aai.aero/en/airports/pune" target="_blank">Pune Airport</a></li>
+        <li><a href="https://www.punemetrorail.org/" target="_blank">Pune Metro Rail</a></li>
+        <li><a href="https://pmpml.org/" target="_blank">PMPML</a></li>
+        <li><a href="https://www.indianrail.gov.in/" target="_blank">Indian Railways</a></li>
+        <li><a href="https://www.irctc.co.in/" target="_blank">IRCTC</a></li>
+      </ul>
+    </div>
+    <button class="sub-accordion">Government <span>&#9660;</span></button>
+    <div class="sub-panel">
+      <!-- <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/1e/Emblem_of_India.svg/1200px-Emblem_of_India.svg.png" alt="Government" style="display:block;max-width:80px;margin:0 auto 10px;"> -->
+      <ul>
+        <li><a href="https://www.gst.gov.in/" target="_blank">GST Portal</a></li>
+        <li><a href="https://incometaxindia.gov.in/Pages/default.aspx" target="_blank">Income Tax India</a></li>
+        <li><a href="https://pune.gov.in/" target="_blank">Pune District</a></li>
+        <li><a href="https://www.pmc.gov.in/en" target="_blank">Pune Municipal Corporation</a></li>
+        <li><a href="https://www.pcmcindia.gov.in/" target="_blank">PCMC</a></li>
+        <li><a href="https://pune.dcourts.gov.in/" target="_blank">Pune District Court</a></li>
+        <li><a href="https://www.imdpune.gov.in/" target="_blank">IMD Pune</a></li>
+        <li><a href="https://pune.cantt.gov.in/" target="_blank">Pune Cantonment</a></li>
+        <li><a href="https://maharashtratourism.gov.in/districts/pune/" target="_blank">Maharashtra Tourism - Pune</a></li>
+        <li><a href="https://punepolice.gov.in/" target="_blank">Pune Police</a></li>
+        <li><a href="https://www.mahadiscom.in/en/home/" target="_blank">MahaDiscom</a></li>
+      </ul>
+    </div>
+    <button class="sub-accordion">News <span>&#9660;</span></button>
+    <div class="sub-panel">
+      <ul>
+        <li><a href="https://www.punekarnews.in/" target="_blank">Punekar News</a></li>
+        <li><a href="https://punemirror.com/" target="_blank">Pune Mirror</a></li>
+        <li><a href="https://epaper.lokmat.com/main-editions/Pune%20Main/-1/1" target="_blank">Lokmat Epaper</a></li>
+        <li><a href="https://epaper.loksatta.com/" target="_blank">Loksatta Epaper</a></li>
+        <li><a href="https://www.jagran.com/maharashtra/pune" target="_blank">Jagran Pune</a></li>
+      </ul>
+    </div>
+    <button class="sub-accordion">Education <span>&#9660;</span></button>
+    <div class="sub-panel">
+      <ul>
+        <li><a href="http://www.unipune.ac.in/" target="_blank">Savitribai Phule Pune University</a></li>
+        <li><a href="https://dhepune.gov.in/" target="_blank">DHE Pune</a></li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+  </section>
+</div>

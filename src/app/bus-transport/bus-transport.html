@@ -1,0 +1,52 @@
+<section>
+    <div class="table-container">
+        <img src="assets/images/adsspace.jpg" alt="AD SPACE AVAILABLE" class="ad-banner">
+        
+        <div class="table-responsive">
+            <table id="myTable" class="display" style="background: white;">
+                <thead>
+                    <tr>
+                        <th>From</th>
+                        <th>To</th>
+                        <th>Transport and Courier name</th>
+                        <th>Contact No.</th>
+                        <th>Address</th>
+                        <th>Email Id</th>
+                        <th>Website / Shipping Tracking URL</th>
+                    </tr>
+                    <tr>
+                        <th><input type="text" placeholder="Search From" [(ngModel)]="search.from" /></th>
+                        <th><input type="text" placeholder="Search To" [(ngModel)]="search.to" /></th>
+                        <th><input type="text" placeholder="Search Transport and Courier" [(ngModel)]="search.transportName" /></th>
+                        <th><input type="text" placeholder="Search Contact No." [(ngModel)]="search.contactNo" /></th>
+                        <th><input type="text" placeholder="Search Address" [(ngModel)]="search.address" /></th>
+                        <th><input type="text" placeholder="Search Email Id" [(ngModel)]="search.emailId" /></th>
+                        <th><input type="text" placeholder="Search Website / Shipping" [(ngModel)]="search.website" /></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let row of filteredData">
+                        <td>{{ row.from || '-' }}</td>
+                        <td>{{ row.to || '-' }}</td>
+                        <td>{{ row.transportName || '-' }}</td>
+                        <td>{{ row.contactNo || '-' }}</td>
+                        <td>{{ row.address || '-' }}</td>
+                        <td>{{ row.emailId || '-' }}</td>
+                        <td *ngIf="row.website">
+                            <a [href]="'http://' + row.website" target="_blank" rel="noopener noreferrer">
+                                {{ row.website }}
+                            </a>
+                        </td>
+                        <td *ngIf="!row.website">-</td>
+                    </tr>
+                    <tr *ngIf="tableData.length === 0">
+                        <td colspan="6" class="no-data">No data available. Please upload an Excel file.</td>
+                    </tr>
+                    <tr *ngIf="tableData.length > 0 && filteredData.length === 0">
+                        <td colspan="7" class="no-data">No matching records found.</td>
+                      </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</section>

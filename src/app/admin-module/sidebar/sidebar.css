@@ -1,0 +1,89 @@
+/* Sidebar base styles */
+#sidebar {
+    width: 250px; 
+    background-image: linear-gradient(to right, #686ee2, #33388d);
+    transition: all 0.3s ease-in-out;
+    position: absolute;
+    top: 4px;
+    left: 0;
+    height: 100vh;
+    /* z-index: 1000; */
+    box-shadow: 2px 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Collapsed state */
+  .sidebar-collapse {
+    transform: translateX(-250px);
+    width: 0;
+    padding: 0;
+    opacity: 0;
+    visibility: hidden;
+  }
+  
+  /* Expanded state */
+  .sidebar-expand {
+    transform: translateX(0);
+    width: 250px;
+    opacity: 1;
+    visibility: visible;
+  }
+  
+  /* Toggle button styles */
+  .sidebar-toggle-btn {
+    position: absolute;
+    top: 4px;
+    left: 250px;
+    z-index: 1050;
+    transition: all 0.3s ease-in-out;
+    background-color: white;
+    border: none;
+    border-radius: 0 4px 4px 0;
+    padding: 8px 12px;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+  }
+  
+  /* Show toggle button when collapsed */
+  /* .sidebar-collapse .sidebar-toggle-btn {
+    left: 0;
+  }
+    /* When sidebar is expanded */
+.sidebar-btn-expanded {
+  left: 250px;
+}
+
+/* When sidebar is collapsed */
+.sidebar-btn-collapsed {
+  left: 0;
+}
+@media(min-width:418px)and (max-width:450px){
+  .sidebar-toggle-btn{
+    top:22px;
+  }
+}
+  
+  /* Position toggle button when expanded */
+  /* .sidebar-expand .sidebar-toggle-btn {
+    left: 250px;
+  } */
+  
+  /* Content area should adjust when sidebar is collapsed */
+  .main-content {
+    margin-left: 250px;
+    transition: all 0.3s ease-in-out;
+    padding: 20px;
+    min-height: 100vh;
+  }
+    /* When sidebar is expanded */
+    /* .main-content-expanded {
+      margin-left: 250px;
+    } */
+    
+    /* When sidebar is collapsed */
+    /* .main-content-collapsed {
+      margin-left: 0;
+    } */
+  
+  /* .sidebar-collapse + .main-content {
+    margin-left: 0;
+  } */

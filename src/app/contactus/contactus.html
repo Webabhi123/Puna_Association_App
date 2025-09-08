@@ -1,1 +1,183 @@
-<p>contactus works!</p>
+<div class="main-container-contact">
+    <h2>CONTACT INFO</h2>
+
+    <div class="info-grid">
+        <div class="card">
+            <strong>ADDRESS DETAILS</strong><br>
+            627 B, Bedekar Sadan, 3rd floor, Opp. Faraskhana Police Station, Budhwar Peth, Pune - 411002
+        </div>
+        <div class="card">
+            <strong>CONTACT INFO</strong><br>
+            7972579597,
+            02029991555
+        </div>
+        <div class="card">
+            <strong>WORKING TIME</strong><br>
+            Monday - Saturday : 10:30 AM - 6:00PM<br>
+            Closed on weekends and public holidays
+        </div>
+        <div class="card">
+            <strong>EMAIL ADDRESS</strong><br>
+            poonaelectricalsassociation&#64;gmail.com<br>
+            peeapune1&#64;gmail.com
+        </div>
+    </div>
+</div>
+
+<div class="map">
+    <iframe
+        src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d3783.2643800441556!2d73.85330147519161!3d18.516951182575927!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMTjCsDMxJzAxLjAiTiA3M8KwNTEnMjEuMiJF!5e0!3m2!1sen!2sin!4v1754401691593!5m2!1sen!2sin"
+        width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade"></iframe>
+</div>
+
+<div class="form-container">
+    <p style="color:#003366; font-size: 20px;">
+        Thanks for your interest in PEEA. Write your query or comments – we would be happy to get in touch with you.
+    </p>
+
+    <form #contactForm="ngForm" (ngSubmit)="onSubmit(contactForm)" id="contactForm">
+        <div class="input-icon-group">
+            <i class="fa fa-user"></i>
+            <input type="text" name="name" [(ngModel)]="contactform.name" required placeholder="Your Name" />
+        </div>
+
+        <div class="input-icon-group">
+            <i class="fa fa-phone"></i>
+            <input type="tel" name="mobileNo" [(ngModel)]="contactform.mobileNo" required placeholder="Mobile Number" />
+        </div>
+
+        <div class="input-icon-group">
+            <i class="fa fa-envelope"></i>
+            <input type="email" name="email" [(ngModel)]="contactform.email" required placeholder="Email" />
+        </div>
+
+        <div class="input-icon-group">
+            <i class="fa fa-list"></i>
+            <select name="inquiryType" [(ngModel)]="contactform.inquiryType" required>
+                <option value="" disabled selected>Inquiry Type</option>
+                <option value="Membership">Membership</option>
+                <option value="Training">Training</option>
+                <option value="Certification">Certification</option>
+                <option value="Events">Events</option>
+                <option value="Other">Other</option>
+            </select>
+        </div>
+
+        <textarea name="message" rows="4" [(ngModel)]="contactform.message" required
+            placeholder="Enter your message here..."></textarea>
+
+        <button type="submit" class="submit-btn">Submit</button>
+    </form>
+</div>
+
+<!-- Footer -->
+<footer class="footer">
+    <div class="footer-container">
+        <div class="footer-columns">
+
+            <!-- Membership Column -->
+            <div class="footer-column">
+                <h3 class="footer-title">MEMBERSHIP</h3>
+                <ul class="footer-links">
+                    <li><a routerLink="/becomemember"><i class="fas fa-chevron-right"></i> Become a Member</a></li>
+                    <!-- <li><a href="membershipbenefit.html"><i class="fas fa-chevron-right"></i> Membership Benefits</a></li> -->
+                </ul>
+                <div class="advertise-link">
+                    <a href="#">
+                        <img src="assets/images/ad/advertisement_us.png" alt="Advertise with us" class="app-store-img">
+                    </a>
+                </div>
+            </div>
+            <!-- Advertise Column -->
+            <div class="footer-column">
+                <h3 class="footer-title">Advertise With Us</h3>
+                <div class="app-download-buttons">
+                    <a href="https://play.google.com/store/apps/details/" target="_blank" class="app-download-link">
+                        <img src="assets/images/GooglePlayStore.png" alt="Get it on Google Play" class="app-store-img">
+                    </a>
+                    <a href="https://apps.apple.com/in/app/" target="_blank" class="app-download-link">
+                        <img src="assets/images/appstore.png" alt="Download on the App Store" class="app-store-img">
+                    </a>
+                </div>
+                <div class="advertise-link">
+                    <a href="#">
+                        <img src="assets/images/ad/advertise_with_us.png" alt="Advertise with us" class="app-store-img">
+                    </a>
+                </div>
+            </div>
+            <!-- Contact Column -->
+            <div class="footer-column">
+                <h3 class="footer-title">CONTACT</h3>
+                <div class="social-icons">
+                    <a href="https://www.facebook.com/peeapune" class="social-icon facebook" title="Facebook"
+                        target="_blank"><i class="fab fa-facebook-f"></i></a>
+                    <a href="www.linkedin.com/in/poona-electricals-association-534882352" class="social-icon linkedin"
+                        title="LinkedIn" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="https://x.com/peeapune?t=Ck14KlQSvWgZlRLclIJZww&s=08" class="social-icon twitter"
+                        title="Twitter/X" target="_blank"><i class="fab fa-x-twitter"></i></a>
+                    <a href="https://www.instagram.com/peea.01/" class="social-icon instagram" title="Instagram"
+                        target="_blank"><i class="fab fa-instagram"></i></a>
+                    <a href="https://www.youtube.com/channel/UCUMVxorfCfCArDf2BIyNFHw" class="social-icon youtube"
+                        title="YouTube" target="_blank"><i class="fab fa-youtube"></i></a>
+                </div>
+            </div>
+            <div class="footer-column">
+                <h3 class="footer-title">Policy </h3>
+                <ul class="footer-links">
+                    <li><a routerLink="/sitemap"><i class="fas fa-chevron-right"></i> Site Map</a></li>
+                    <li><a routerLink="/privacy-policy"><i class="fas fa-chevron-right"></i> Privacy Policy</a></li>
+                    <li><a routerLink="/refund-policy"><i class="fas fa-chevron-right"></i> Refund Policy</a></li>
+                    <li><a routerLink="/disclaimer"><i class="fas fa-chevron-right"></i> Disclaimer</a></li>
+                    <li><a routerLink="/terms-condition"><i class="fas fa-chevron-right"></i> Terms &amp; Conditions</a>
+                    </li>
+                </ul>
+            </div>
+
+
+
+            <!-- Get In Touch Column -->
+            <div class="footer-column">
+                <h3 class="footer-title">GET IN TOUCH</h3>
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <i class="fas fa-building"></i>
+                        <div class="address-container">
+                            <div>Poona Electric And Electronics Association</div>
+                            <div>627B, Bedekar Sadan,</div>
+                            <div>3rd floor,Opp.Faraskhana Police Station</div>
+                            <div>Nr.Dagduseth Ganpati Mandir,</div>
+                            <div>Budhwar Peth, Pune - 411002.</div>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <div class="email-container">
+                            <div>poonaelectricalsassociation&#64;gmail.com</div>
+                            <div>peeapune1&#64;gmail.com</div>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-phone"></i>
+                        <span><span>Phone Number - 7972579597, 02029991555</span></span>
+                        <div class="logo-final">
+                            <img src="assets/brands-logo/PEEA_LOGO_2-removebg-preview.png" width="60px">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer Bottom -->
+    <div class="footer-bottom">
+        <div class="footer-container">
+            <p>
+                © 2025 All Right Reserved by Poona Electric & Electronics Association | Powered by
+                <a href="https://dodigitalnow.com" target="_blank" rel="noopener">
+                    <img src="assets/images/dodigitalnow.png" alt="DoDigitalNow" class="company-logo">
+                </a>
+            </p>
+        </div>
+    </div>
+</footer>

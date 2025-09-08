@@ -1,0 +1,40 @@
+<!-- User View -->
+<div *ngIf="currentUserRole === 'user'" class="admin-layout">
+    <div class="row g-4">
+      <!-- Profile Card -->
+      <div class="col-md-4">
+        <div class="card h-100 shadow-sm">
+          <div class="card-body text-center">
+            <i class="fas fa-user-circle fa-4x text-primary mb-3"></i>
+            <h5 class="card-title">My Profile</h5>
+            <p class="card-text">View and update your personal information</p>
+            <a routerLink="/admin/user" class="btn btn-outline-primary w-100">Go to Profile</a>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Member Directory Card -->
+      <div class="col-md-4">
+        <div class="card h-100 shadow-sm">
+          <div class="card-body text-center">
+            <i class="fas fa-users fa-4x text-success mb-3"></i>
+            <h5 class="card-title">Member Directory</h5>
+            <p class="card-text">Browse and connect with other members</p>
+            <a routerLink="/admin/memberdirectory" class="btn btn-outline-success w-100">View Directory</a>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Logout Card -->
+      <div class="col-md-4">
+        <div class="card h-100 shadow-sm">
+          <div class="card-body text-center">
+            <i class="fas fa-sign-out-alt fa-4x text-danger mb-3"></i>
+            <h5 class="card-title">Sign Out</h5>
+            <p class="card-text">Securely log out of your account</p>
+            <button (click)="logout()" class="btn btn-outline-danger w-100">Logout</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>

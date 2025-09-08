@@ -1,0 +1,67 @@
+<nav class="navbar">
+  <button class="navbar-toggle" (click)="toggleNavbar()">☰</button>
+  <ul id="navbarMenu" [class.active]="isMenuOpen">
+    <li><a routerLink="/" (click)="closeMenu()"><i class="fa-solid fa-house"></i></a></li>
+    <li>
+      <a href="#" (click)="toggleMegaMenu($event, 'about')">ABOUT PEEA</a>
+      <div class="dropdown" [class.show]="openCategory === 'about'" >
+        <a class="dropdown-item" routerLink="/about" (click)="onDropdownItemClick()">About Us</a>
+        <a class="dropdown-item" routerLink="/need" (click)="onDropdownItemClick()">Need</a>
+        <a class="dropdown-item" routerLink="/belief" (click)="onDropdownItemClick()">Beliefs</a>
+        <a class="dropdown-item" routerLink="/keyinitiative" (click)="onDropdownItemClick()">Key Initiatives</a>
+        <a class="dropdown-item" routerLink="/history" (click)="onDropdownItemClick()">History</a>
+        <a class="dropdown-item" routerLink="/aimsobjective" (click)="onDropdownItemClick()">Aims & Objectives</a>
+        <a class="dropdown-item" routerLink="/facilitymember" (click)="onDropdownItemClick()">Facility To Members</a>
+        <a class="dropdown-item" routerLink="/alliancenational" (click)="onDropdownItemClick()">Alliances National</a>
+        <a class="dropdown-item" routerLink="/allianceinternational" (click)="onDropdownItemClick()">Alliances International</a>
+      </div>
+    </li>
+    <li>
+      <a href="#" (click)="toggleMegaMenu($event, 'committee')">COMMITTEE</a>
+      <div class="dropdown" [class.show]="openCategory === 'committee'">
+        <a routerLink="/presidentsdesk" (click)="onDropdownItemClick()">Presidents desk</a>
+        <a routerLink="/managingcommittee" (click)="onDropdownItemClick()">Managing Committee</a>
+        <a routerLink="/pastpresident" (click)="onDropdownItemClick()">Past President</a>
+      </div>
+    </li>
+    <li>
+      <a href="#" (click)="toggleMegaMenu($event, 'membership')">MEMBERSHIP</a>
+      <div class="dropdown" [class.show]="openCategory === 'membership'">
+        <a routerLink="/memberlogin" (click)="onDropdownItemClick()">Member Search</a>
+        <a routerLink="/becomemember" (click)="onDropdownItemClick()">Become a Member</a>
+      </div>
+    </li>
+    <li><a routerLink="/product-category" (click)="closeMenu()">CATEGORIES</a></li>
+    <li>
+      <a href="#" (click)="toggleMegaMenu($event, 'news')">NEWS & EVENTS</a>
+      <div class="dropdown" [class.show]="openCategory === 'news'">
+        <a routerLink="/exhibitions" (click)="onDropdownItemClick()">Exhibitions</a>
+        <a routerLink="/conferences" (click)="onDropdownItemClick()">Conferences</a>
+        <a routerLink="/webinars" (click)="onDropdownItemClick()">Webinars</a>
+        <a routerLink="/eventcalendars" (click)="onDropdownItemClick()">Event Calendar</a>
+        <a routerLink="/awards" (click)="onDropdownItemClick()">Awards</a>
+      </div>
+    </li>
+    <li>
+      <a href="#" (click)="toggleMegaMenu($event, 'media')">MEDIA</a>
+      <div class="dropdown" [class.show]="openCategory === 'media'">
+        <a routerLink="/photos" (click)="onDropdownItemClick()">Photos</a>
+        <a routerLink="/videos" (click)="onDropdownItemClick()">Videos</a>
+        <a routerLink="/inspiringstories" (click)="onDropdownItemClick()">Inspiring Stories</a>
+        <a routerLink="/blogs" (click)="onDropdownItemClick()">Blogs</a>
+      </div>
+    </li>
+    <!-- <li><a routerLink="/transport" (click)="closeMenu()">TRANSPORT</a></li> -->
+    <li>
+      <a href="#" (click)="toggleMegaMenu($event, 'transport')">TRANSPORT</a>
+      <div class="dropdown" [class.show]="openCategory === 'transport'">
+        <a routerLink="/logistics-transport" (click)="onDropdownItemClick()">Logistics</a>
+        <a routerLink="/transport" (click)="onDropdownItemClick()">Courier</a>
+        <a routerLink="/bus-transport" (click)="onDropdownItemClick()">Bus/Travel</a>
+        <a routerLink="/railway-transport" (click)="onDropdownItemClick()">Train</a>
+      </div>
+    </li>
+    <li><a routerLink="/download" (click)="closeMenu()">DOWNLOAD</a></li>
+    <li><a routerLink="/contactus" (click)="closeMenu()">CONTACT US</a></li>
+  </ul>
+</nav>

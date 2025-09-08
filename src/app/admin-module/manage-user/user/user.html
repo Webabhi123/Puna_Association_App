@@ -1,0 +1,153 @@
+<div class="mt-6" >
+  <div class="d-flex justify-content-between align-items-center mb-3 header-actions" *ngIf="currentUserRole === 'superadmin'">
+    <button class="btn btn-primary" [routerLink]="['/admin/create-user']">Create User</button>
+    <div class="position-relative" style="min-width: 250px;">
+      <input type="text" class="form-control" placeholder="Search user..." [(ngModel)]="searchKeyword" (input)="onSearchInput()" autocomplete="off">
+      <ul *ngIf="showSuggestions && filteredSuggestions.length > 0" class="list-group position-absolute w-100" style="z-index: 10; max-height: 200px; overflow-y: auto;">
+        <li class="list-group-item list-group-item-action" *ngFor="let suggestion of filteredSuggestions" (click)="selectSuggestion(suggestion)">
+          {{ suggestion }}
+        </li>
+      </ul>
+    </div>
+  </div>
+  <div class="table-responsive" *ngIf="currentUserRole === 'superadmin'">
+  <table class="table table-bordered table-hover" >
+    <thead class="table-dark">
+      <tr>
+        <th>Firm Name</th>
+        <!-- <th>UserEmail</th> -->
+        <th>Address </th>
+        <th>Owner Name</th>
+        <th>Phone Number</th>
+        <th>Action</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let user of filteredUsers">
+        <td>{{ user.nameOfFirm }}</td>
+        <td>{{ user.address }}</td>
+        <td>{{ user.ownerName }}</td>
+        <td>{{ user.phoneNumber }}</td>
+        <!-- <td>{{ user.email }}</td> -->
+        <!-- <td>{{ user.userRole }}</td> -->
+        <td class="d-flex overflow-y-auto">
+
+          <button class="btn btn-warning btn-sm me-2" [routerLink]="['/admin/create-user', user.id]">Edit</button>
+          <button class="btn btn-danger btn-sm me-2" *ngIf="currentUserRole === 'superadmin'" (click)="openDeleteModal(user)">Delete</button>
+          <button  class="btn btn-primary btn-sm me-2" (click)="openCardModal(user)">
+            <i class="fa fa-share-alt me-2"></i> Share
+          </button>
+          
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+</div>
+<!-- for edit -->
+
+<div id="userDirectory" class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4" style="display: flex; justify-content: center;" *ngIf="currentUserRole === 'user'">
+  <div class="col" *ngFor="let user of filteredUsers">
+    <div class="card h-100 member-card">
+      <div class="card-header text-white">
+        <h5 class="card-title mb-0" style="text-align: center;">{{ user.nameOfFirm || 'N/A' }}</h5>
+      </div>
+      <div class="card-body" style="text-align: center;">
+        <div class="member-info">
+          <div class="info-item">
+            <i class="fas fa-user-tie me-2"></i>
+            <span>{{ user.ownerName || 'N/A' }}</span>
+          </div>
+          <div class="info-item">
+            <i class="fas fa-phone me-2"></i>
+            <span>{{ user.phoneNumber || 'N/A' }}</span>
+          </div>
+          <div class="info-item">
+            <i class="fas fa-map-marker-alt me-2"></i>
+            <span>{{ user.address || 'N/A' }}</span>
+          </div>
+        </div>
+      </div>
+      <div class="card-footer text-center">
+        <button class="btn btn-sm btn-warning me-2 text-white text-center" [routerLink]="['/admin/create-user', user.id]">
+          <i class="fas fa-edit"></i> Edit
+        </button>
+        <button class="btn btn-sm btn-info me-2 text-white text-center" (click)="openCardModal(user)">
+          <i class="fas fa-share-alt"></i> Share
+        </button>
+        <button class="btn btn-sm btn-info text-white text-center" [routerLink]="['/admin/dashboard']">
+          <i class="fas fa-arrow-left"></i> Back
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<div class="modal fade" id="deleteConfirmModal" tabindex="-1" aria-labelledby="deleteConfirmModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header bg-danger text-white">
+        <h5 class="modal-title" id="deleteConfirmModalLabel">Confirm Delete</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        Are you sure you want to delete this user?
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+        <button type="button" *ngIf="currentUserRole === 'superadmin'" class="btn btn-danger" (click)="confirmDelete()">Delete</button>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- User Card Modal -->
+<div class="modal fade" id="userCardModal" tabindex="-1" aria-labelledby="userCardModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content card-capture">
+      <div class="modal-header">
+        <!-- <h5 class="modal-title" id="userCardModalLabel">User Card</h5> -->
+        <img src="assets/brands-logo/PEEA_LOGO_1-removebg-preview.png" alt="PEEA Logo" class="logo-img">
+        <h5 class="modal-title" id="userCardModalLabel">Poona Electric & Electronics Association</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <div class="card text-center">
+          <div class="card-body">
+            <img [src]="getImageUrl(selectedUser?.photo) || 'assets/profile.jpg'" alt="User Photo"  class="zoomable-img rounded-circle mb-3" (click)="openZoom(selectedUser?.photo)" style="width:116px;height:130px;object-fit:cover;">
+            <h2>{{ selectedUser?.nameOfFirm }}</h2>
+            <h4 class="card-title">{{ selectedUser?.ownerName }}</h4>
+            <!-- <h6 class="card-subtitle mb-2 text-muted">{{ selectedUser?.userRole || 'Member' }}</h6> -->
+            <hr>
+            <div class="d-flex justify-content-center mb-2">
+              <button class="btn btn-sm me-2 btn-outline-success" *ngIf="!downloaded" (click)="downloadCardAsImage()">
+                <i class="fa fa-download me-2"></i>Download Card as Image
+              </button>
+            </div>
+            <div class="contact-info-column">
+              <div class="contact-row">
+                <span class="icon-col"><i class="fa fa-phone"></i></span>
+                <span class="text-col">{{ selectedUser?.phoneNumber }}</span>
+              </div>
+              <div class="contact-row">
+                <span class="icon-col"><i class="fa fa-globe"></i></span>
+                <span class="text-col">{{ selectedUser?.website }}</span>
+              </div>
+              <div class="contact-row">
+                <span class="icon-col"><i class="fa fa-envelope"></i></span>
+                <span class="text-col">{{ selectedUser?.personalEmail }}</span>
+              </div>
+              <div class="contact-row">
+                <span class="icon-col"><i class="fa fa-map-marker"></i></span>
+                <span class="text-col">{{ selectedUser?.address }}</span>
+              </div>
+            </div>
+          </div>
+          <div class="zoom-modal" *ngIf="zoomedImageUrl" (click)="closeZoom()">
+            <img [src]="getImageUrl(zoomedImageUrl)" alt="Zoomed Image" class="zoomed-image" />
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

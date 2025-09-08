@@ -1,0 +1,28 @@
+.table {
+    font-size: 0.95rem;
+}
+.table th {
+    background-color: #f8f9fa;
+    text-align: center;
+    vertical-align: middle;
+}
+.table td {
+    vertical-align: middle;
+}
+.table-hover tbody tr:hover {
+    background-color: rgba(0, 123, 255, 0.075);
+}
+.table-responsive {
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+h3 {
+    color: #3b5fbf;
+    font-weight: 600;
+    margin-bottom: 1.5rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid #3498db;
+    display: inline-block;
+    text-align: center;
+}

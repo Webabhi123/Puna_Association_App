@@ -1,0 +1,133 @@
+.committee-accordion {
+  width: 96%;
+  max-width: 1400px;
+  margin: 40px auto;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 2px 12px rgba(51,56,141,0.08);
+  font-family: 'Segoe UI', sans-serif;
+  background: #fff;
+}
+.committee-accordion-item {
+  border-bottom: 1px solid #eee;
+}
+.committee-accordion-header {
+  cursor: pointer;
+  background: #fff;
+  padding: 22px 32px;
+  font-size: 1.18rem;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  transition: background 0.3s;
+}
+.committee-accordion-header:hover {
+  background-image: linear-gradient(to right, #686ee2, #33388d);
+  color: #fff;
+}
+.committee-accordion-header .arrow {
+  transition: transform 0.3s;
+}
+.committee-accordion-header.active .arrow {
+  transform: rotate(90deg);
+}
+.committee-accordion-content {
+  display: none;
+  background: #f9f9fb;
+  padding: 0 0 24px 0;
+  animation: fadeIn 0.3s;
+}
+@media(max-width:768px){
+  .committee-accordion-content{
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    width: 100%;
+    margin: 0 -15px;
+    padding: 0 15px 15px 15px; /* Added bottom padding for scrollbar */
+    max-height: 80vh; /* Limit height to 80% of viewport */
+    /* Custom scrollbar */
+    scrollbar-width: thick; /* For Firefox */
+    scrollbar-color: #33388d #f1f1f1; /* For Firefox */
+  }
+  /* Webkit (Chrome, Safari, Edge) scrollbar */
+  .committee-accordion-content::-webkit-scrollbar {
+    height: 12px; /* Increased scrollbar height */
+  }
+  .committee-accordion-content::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 6px;
+  }
+  .committee-accordion-content::-webkit-scrollbar-thumb {
+    background: #33388d;
+    border-radius: 6px;
+  }
+  .committee-accordion-content::-webkit-scrollbar-thumb:hover {
+    background: #1e2266;
+  }
+  .committee-table {
+    min-width: 800px;  /* Increased from 600px to 800px for more horizontal space */
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  /* Optional: Add a subtle shadow to indicate scrollability */
+  .committee-accordion-content:after {
+    content: '';
+    position: absolute;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    width: 30px;
+    background: linear-gradient(90deg, rgba(255,255,255,0) 0%, rgba(255,255,255,0.9) 100%);
+    pointer-events: none;
+  }
+}
+@media(max-width:550px){
+  .committee-table {
+    min-width: 800px;  /* Increased from 600px to 800px for more horizontal space */
+    border-collapse: collapse;
+  }
+}
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+.committee-table {
+  width: 98%;
+  margin: 24px auto 0 auto;
+  border-collapse: collapse;
+  background: #fff;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 2px 12px rgba(51,56,141,0.05);
+}
+.committee-table th, .committee-table td {
+  padding: 16px 10px;
+  text-align: left;
+  border-bottom: 1px solid #f0f0f0;
+  font-size: 1.08rem;
+}
+.committee-table th {
+  background: #f8f8fa;
+  font-weight: 700;
+  color: #222;
+}
+.committee-table tr:last-child td {
+  border-bottom: none;
+}
+.committee-table .committee-photo {
+  width: 80px;
+  height: 95px;
+  border-radius: 8px;
+  object-fit: cover;
+  border: 2px solid #eee;
+  background: #fff;
+  display: block;
+  margin: 0 auto;
+}
+@media (max-width: 900px) {
+  .committee-accordion { padding: 0 4px; }
+  .committee-table th, .committee-table td { padding: 10px 4px; font-size: 1em; }
+  .committee-table .committee-photo { width: 60px; height: 70px; }
+}

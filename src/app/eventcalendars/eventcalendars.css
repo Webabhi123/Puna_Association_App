@@ -1,0 +1,58 @@
+ .notice-board{
+  text-align:center;
+  color: #fff;
+  background-image: linear-gradient(to right, #686ee2, #33388d);
+ }
+ ul{
+  list-style-type: none;
+ }
+ #calendar-container {
+      max-width: 900px;
+      margin: 40px auto 60px auto;
+      background: #fff;
+      border-radius: 16px;
+      box-shadow: 0 4px 24px rgba(104, 110, 226, 0.07);
+      padding: 24px 18px 32px 18px;
+    }
+
+    #calendar {
+      max-width: 850px;
+      margin: 0 auto;
+    }
+
+    .add-event-form {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 16px;
+      justify-content: center;
+      align-items: center;
+      margin-bottom: 24px;
+    }
+
+    .add-event-form input,
+    .add-event-form button {
+      padding: 8px 12px;
+      font-size: 1rem;
+      border-radius: 6px;
+      border: 1px solid #ccc;
+    }
+
+    .add-event-form button {
+      background: #686ee2;
+      color: #fff;
+      border: none;
+      cursor: pointer;
+      font-weight: 600;
+      transition: background 0.2s;
+    }
+
+    .add-event-form button:hover {
+      background: #4b51b3;
+    }
+
+    .fc-h-event .fc-event-title-container {
+      flex-grow: 1;
+      flex-shrink: 1;
+      min-width: 0px;
+      text-align: center;
+    }

@@ -1,0 +1,26 @@
+<div id="calendar"></div>
+<!-- Modal -->
+<div class="modal fade" id="eventModal" tabindex="-1">
+  <div class="modal-dialog">
+    <form (ngSubmit)="submitEvent()">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">{{ isEdit ? 'Edit' : 'Add' }} Event</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+        </div>
+        <div class="modal-body">
+          <input [(ngModel)]="event.title" name="title" placeholder="Title" required />
+          <input [(ngModel)]="event.date" name="date" type="date" required />
+          <select [(ngModel)]="event.type" name="type">
+            <option value="Holiday">Holiday</option>
+            <option value="Webinar">Webinar</option>
+          </select>
+        </div>
+        <div class="modal-footer">
+          <button type="submit" class="btn btn-primary">{{ isEdit ? 'Update' : 'Add' }}</button>
+          <button *ngIf="isEdit" type="button" class="btn btn-danger" (click)="deleteEvent()">Delete</button>
+        </div>
+      </div>
+    </form>
+  </div>
+</div>
